@@ -54,7 +54,7 @@ const CONFIG = {
   seo: {
     title: 'Prince Raj',
     description: 'A person who likes to code.',
-    imageURL: 'https://i.ibb.co/zJ4P513/Untitled-design-modified.png',
+    imageURL: 'https://i.ibb.co/JcWbK36/Untitled-design.png',
   },
   social: {
     linkedin: 'theprinceraj',
