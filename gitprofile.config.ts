@@ -29,10 +29,10 @@ const CONFIG = {
       },
     },
     external: {
-      /* header: 'My Projects',
+       header: 'My Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
-        {
+        /*{
           title: 'Project Name',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
