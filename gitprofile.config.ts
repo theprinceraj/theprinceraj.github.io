@@ -71,7 +71,7 @@ const CONFIG = {
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.prince.is-a.dev',
+    website: 'https://prince.is-a.dev',
     phone: '',
     email: 'profile.princeraj@gmail.com',
   },
@@ -89,7 +89,10 @@ const CONFIG = {
     'MongoDB',
     'Google Firebase',
     'Bootstrap',
-    'Discord.js'
+    'Discord.js',
+    'Electronjs',
+    'TailwindCSS',
+    'Selenium'
   ],
   experiences: [
     {
