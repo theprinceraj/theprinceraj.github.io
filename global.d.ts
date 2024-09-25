@@ -138,9 +138,24 @@ interface Social {
   instagram?: string;
 
   /**
+   * Reddit
+   */
+  reddit?: string;
+
+  /**
+   * Threads
+   */
+  threads?: string;
+
+  /**
    * YouTube
    */
   youtube?: string;
+
+  /**
+   * Udemy
+   */
+  udemy?: string;
 
   /**
    * Dribbble
@@ -195,7 +210,7 @@ interface Social {
 
 interface Resume {
   /**
-   * Resume file urlm
+   * Resume file url
    */
   fileUrl?: string;
 }
