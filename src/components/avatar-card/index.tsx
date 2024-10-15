@@ -86,7 +86,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               href={resumeFileUrl}
               target="_blank"
               className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
+              download="CV_Prince_Raj.pdf"
               rel="noreferrer"
             >
               Download Resume
