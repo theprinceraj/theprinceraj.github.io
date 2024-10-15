@@ -29,33 +29,30 @@ const CONFIG = {
       },
     },
     external: {
-       header: 'My Projects',
+      header: 'My Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
-       {
+        {
           title: 'Cruise Booking System',
           description:
             'A comprehensive full-stack web application using React and Node.js, capable of handling up to 100 bookings per month implemented with robust user authentication using session-based cookie management, ensuring a secure login process. It also has optimized backend integration for 20% faster real-time booking and profile management, resulting in a smoother user experience.',
-          imageUrl:
-            'https://i.ibb.co/b6ttqS1/image-2024-10-16-005231068.png',
+          imageUrl: 'https://i.ibb.co/b6ttqS1/image-2024-10-16-005231068.png',
           link: 'https://lenincruise.vercel.app',
         },
-      {
+        {
           title: 'OCR-based Marksheet Scanner and CSV Converter Tool',
           description:
             'A web-based OCR application using Tesseract.js to automate the scanning and conversion of semester marksheets into CSV files, capable of processing 150+ mark sheets per day. It has custom utility functions to extract relevant data, ensuring accuracy in the converted CSV format. Its made to streamline the process of marksheet conversion, reducing manual workload by 50% and improving efficiency by 20%.',
-          imageUrl:
-            'https://i.ibb.co/P5dXkqp/image-2024-10-16-010359333.png',
+          imageUrl: 'https://i.ibb.co/P5dXkqp/image-2024-10-16-010359333.png',
           link: 'https://github.com/theprinceraj/Markshify',
         },
         {
           title: 'Profile Cards Generator',
           description:
             'A scalable API that dynamically generates personalized profile cards based on user inputs with optimized performance for input handling, reducing the load on backend server by 20%. Deployed on Vercel for efficient and reliable profile rendering, achieving a 99.95% uptime rate',
-          imageUrl:
-            'https://i.ibb.co/SX43LVw/image-2024-10-16-010742777.png',
-          link: 'https://prince.is-a.dev/Profile-Cards-API/', 
-        }
+          imageUrl: 'https://i.ibb.co/SX43LVw/image-2024-10-16-010742777.png',
+          link: 'https://prince.is-a.dev/Profile-Cards-API/',
+        },
       ],
     },
   },
@@ -87,8 +84,7 @@ const CONFIG = {
     email: 'profile.princeraj@gmail.com',
   },
   resume: {
-    fileUrl:
-      'https://prince.is-a.dev/resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: 'https://prince.is-a.dev/resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -105,7 +101,7 @@ const CONFIG = {
     'Tailwind CSS',
     'Selenium Webdriver',
     'C++',
-    'C'
+    'C',
   ],
   experiences: [
     {
