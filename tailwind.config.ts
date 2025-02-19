@@ -27,7 +27,7 @@ const config: Config = {
             },
             animation: {
                 "ping-large": "ping-large 1s ease-in-out infinite",
-                "scroll": "scroll 1s linear infinite",
+                "scroll-left": "scroll-left 1s linear infinite",
             },
             keyframes: {
                 "ping-large": {
@@ -36,7 +36,7 @@ const config: Config = {
                         opacity: "0",
                     },
                 },
-                "scroll": {
+                "scroll-left": {
                     "0%": {
                         transform: "translateX(0%)",
                     },

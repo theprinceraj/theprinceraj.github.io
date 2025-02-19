@@ -23,7 +23,7 @@ export const TapeSection = () => {
                     style={{
                         maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
                     }}>
-                    <div className="flex flex-none gap-4 pr-4 animate-scroll [animation-duration:15s]">
+                    <div className="flex flex-none gap-4 pr-4 animate-scroll-left [animation-duration:15s]">
                         {[...new Array(2)].fill(0).map((_, index) => (
                             <Fragment key={index}>
                                 {words.map((word) => (
