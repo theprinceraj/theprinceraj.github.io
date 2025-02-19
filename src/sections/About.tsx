@@ -1,3 +1,4 @@
+"use client";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import bookImage from "@/assets/images/book-cover.png";
@@ -12,6 +13,8 @@ import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItemsRow } from "@/components/ToolboxItemsRow";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxItems = [
     {
@@ -93,6 +96,8 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+    const constraintRef = useRef(null);
+
     return (
         <div className="py-20 md:py-14 lg:py-20 lg:mt-3">
             <div className="container">
@@ -109,7 +114,11 @@ export const AboutSection = () => {
                                 description="Explore the books shaping my perspectives."
                                 className="md:py-2.5 md:px-4 lg:px-4 lg:py-1.5"
                             />
-                            <Image src={bookImage} alt="Book Cover Image" className="w-40 mx-auto mt-6 md:mt-3 lg:pt-1" />
+                            <Image
+                                src={bookImage}
+                                alt="Book Cover Image"
+                                className="w-40 mx-auto mt-6 md:mt-3 lg:pt-1"
+                            />
                         </Card>
                         <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
                             <CardHeader
@@ -117,11 +126,15 @@ export const AboutSection = () => {
                                 description="Explore the technologies and tools I use to craft exceptional digital experiences."
                                 className="p-6 pb-0 lg:-mt-0.5"
                             />
-                            <ToolboxItemsRow items={toolboxItems} className="mt-4 md:mt-6" />
+                            <ToolboxItemsRow
+                                items={toolboxItems}
+                                className="mt-4 md:mt-6"
+                                itemsWrapperClassName="animate-scroll-left [animation-duration:30s]"
+                            />
                             <ToolboxItemsRow
                                 items={toolboxItems}
                                 className="mt-6"
-                                itemsWrapperClassName="-translate-x-1/2"
+                                itemsWrapperClassName="animate-scroll-right [animation-duration:15s]"
                             />
                         </Card>
                     </div>
@@ -132,29 +145,33 @@ export const AboutSection = () => {
                                 description="Explore my interests and hobbies beyond the digital realm."
                                 className="p-6 md:pb-8"
                             />
-                            <div className="relative z-0 flex-1 lg:-mt-1">
+                            <div className="relative z-0 flex-1 lg:-mt-1" ref={constraintRef}>
                                 {hobbies.map((hobby) => (
-                                    <div
+                                    <motion.div
                                         key={hobby.title}
                                         className="inline-flex items-center gap-1.5 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute"
                                         style={{
                                             left: hobby.left,
                                             top: hobby.top,
                                             zIndex: hobby.zIndex,
-                                        }}>
+                                        }}
+                                        drag
+                                        dragConstraints={constraintRef}>
                                         <span className="font-semibold text-gray-950">{hobby.title}</span>
                                         <span>{hobby.emoji}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </Card>
-                        <Card className="h-[320px] p-0 relative z-0 md:col-span-2 lg:col-span-2">
+                        <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-2">
                             <Image
                                 src={mapImage}
                                 alt="Map Image"
                                 className="h-full w-full object-cover object-left-top"
                             />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full animate-ping [animation-duration:2s]"></div>
+                                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full"></div>
                                 <Image src={smileMemoji} alt="Smile Memoji" className="size-20" />
                             </div>
                         </Card>
