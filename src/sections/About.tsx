@@ -107,15 +107,15 @@ export const AboutSection = () => {
                             <CardHeader
                                 heading="My Reads"
                                 description="Explore the books shaping my perspectives."
-                                className="md:py-2.5 md:px-4 lg:px-4 lg:mx-0.5 lg:py-1.5"
+                                className="md:py-2.5 md:px-4 lg:px-4 lg:py-1.5"
                             />
-                            <Image src={bookImage} alt="Book Cover Image" className="w-40 mx-auto mt-6 md:mt-3" />
+                            <Image src={bookImage} alt="Book Cover Image" className="w-40 mx-auto mt-6 md:mt-3 lg:pt-1" />
                         </Card>
                         <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
                             <CardHeader
                                 heading="My Toolbox"
                                 description="Explore the technologies and tools I use to craft exceptional digital experiences."
-                                className="p-6 pb-0 lg:pr-64 lg:mr-8 lg:-mt-0.5"
+                                className="p-6 pb-0 lg:-mt-0.5"
                             />
                             <ToolboxItemsRow items={toolboxItems} className="mt-4 md:mt-6" />
                             <ToolboxItemsRow
@@ -130,7 +130,7 @@ export const AboutSection = () => {
                             <CardHeader
                                 heading="Beyond the Code"
                                 description="Explore my interests and hobbies beyond the digital realm."
-                                className="p-6 md:pb-8 lg:pr-64"
+                                className="p-6 md:pb-8"
                             />
                             <div className="relative z-0 flex-1 lg:-mt-1">
                                 {hobbies.map((hobby) => (
