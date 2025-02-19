@@ -55,7 +55,7 @@ export const TestimonialsSection = () => {
                     style={{
                         maskImage: `linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)`,
                     }}>
-                    <div className="flex gap-8 flex-none animate-scroll [animation-duration:90s] hover:[animation-play-state:paused]">
+                    <div className="flex gap-8 pr-8 flex-none animate-scroll [animation-duration:90s] hover:[animation-play-state:paused]">
                         {[...new Array(2)].fill(0).map((_, index) => (
                             <Fragment key={index}>
                                 {testimonials.map((testimonial) => (
