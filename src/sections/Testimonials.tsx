@@ -56,18 +56,24 @@ export const TestimonialsSection = () => {
                     }}>
                     <div className="flex gap-8 flex-none">
                         {testimonials.map((testimonial) => (
-                            <Card key={testimonial.name} className="max-w-xs md:max-w-md md:p-8">
-                                <div className="flex items-center gap-4">
-                                    <div className="inline-flex items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0">
-                                        <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full" />
+                            <div key={testimonial.name}>
+                                <Card className="max-w-xs md:max-w-md md:p-8">
+                                    <div className="flex items-center gap-4">
+                                        <div className="inline-flex items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0">
+                                            <Image
+                                                src={testimonial.avatar}
+                                                alt={testimonial.name}
+                                                className="max-h-full"
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="font-semibold">{testimonial.name}</div>
+                                            <div className="text-sm text-white/40">{testimonial.position}</div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div className="font-semibold">{testimonial.name}</div>
-                                        <div className="text-sm text-white/40">{testimonial.position}</div>
-                                    </div>
-                                </div>
-                                <p className="text-sm md:text-base mt-4 md:my-6">{testimonial.text}</p>
-                            </Card>
+                                    <p className="text-sm md:text-base mt-4 md:my-6">{testimonial.text}</p>
+                                </Card>
+                            </div>
                         ))}
                     </div>
                 </div>
