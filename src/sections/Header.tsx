@@ -1,17 +1,26 @@
+import { useEffect, useState } from "react";
+import { aboutSectionId, contactSectionId, heroSectionId, projectsSectionId } from "./constants";
+
 export const Header = () => {
+    const [activeSection, setActiveSection] = useState(heroSectionId);
+
+    useEffect(() => {
+        
+    }, []);
+
     return (
         <div className="flex justify-center items-center fixed top-3 w-full z-10">
             <nav className="flex gap-3 p-0.5 border border-white/30 rounded-full bg-white/10 backdrop-blur">
-                <a href="#" className="nav-item">
+                <a href={"#" + heroSectionId} className="nav-item nav-highlighted">
                     Home
                 </a>
-                <a href="#" className="nav-item">
+                <a href={"#" + projectsSectionId} className="nav-item">
                     Projects
                 </a>
-                <a href="#" className="nav-item">
+                <a href={"#" + aboutSectionId} className="nav-item">
                     About
                 </a>
-                <a href="#" className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">
+                <a href={"#" + contactSectionId} className="nav-item">
                     Contact
                 </a>
             </nav>

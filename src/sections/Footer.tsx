@@ -1,23 +1,5 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-
-const footerLinks = [
-    {
-        title: "Youtube",
-        href: "#",
-    },
-    {
-        title: "Twitter",
-        href: "#",
-    },
-    {
-        title: "Instagram",
-        href: "#",
-    },
-    {
-        title: "LinkedIn",
-        href: "#",
-    },
-];
+import { footerLinks } from "../../profile.config";
 
 export const Footer = () => {
     return (

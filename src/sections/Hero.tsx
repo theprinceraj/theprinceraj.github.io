@@ -5,10 +5,11 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import { heroSectionId } from "./constants";
 
 export const HeroSection = () => {
     return (
-        <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+        <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip" id={heroSectionId}>
             <div
                 className="absolute inset-0"
                 style={{
@@ -126,6 +127,6 @@ export const HeroSection = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
