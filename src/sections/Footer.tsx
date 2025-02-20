@@ -3,7 +3,7 @@ import { footerLinks } from "../../profile.config";
 
 export const Footer = () => {
     return (
-        <footer className="pt-4 relative -z-10 overflow-x-clip lg:pt-8">
+        <footer className="pt-4 relative z-0 overflow-x-clip lg:pt-8">
             <div
                 className="absolute h-[400px] w-[1600px] bottom-0 -z-10 left-1/2 -translate-x-1/2 bg-emerald-300/30"
                 style={{
