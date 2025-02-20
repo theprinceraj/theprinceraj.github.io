@@ -4,11 +4,10 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { portfolioProjects } from "../../profile.config";
-import { projectsSectionId } from "./constants";
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ id }: { id: string }) => {
     return (
-        <section className="pb-16 lg:py-24" id={projectsSectionId}>
+        <section className="pb-16 lg:py-24" id={id}>
             <div className="container">
                 <SectionHeader
                     heading1="Real-world Results"

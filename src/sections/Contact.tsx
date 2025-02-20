@@ -1,11 +1,10 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
-import { contactSectionId } from "./constants";
 
-export const ContactSection = () => {
+export const ContactSection = ({ id }: { id: string }) => {
     return (
         <div className="py-12 md:pt-16 md:mt-2.5 lg:pt-24 lg:mt-3.5">
-            <section className="container" id={contactSectionId}>
+            <section className="container" id={id}>
                 <div className="rounded-3xl bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 py-8 px-10 text-center md:text-left relative z-0 overflow-clip">
                     <div
                         className="absolute inset-0 -z-10 opacity-5"

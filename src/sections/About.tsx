@@ -10,14 +10,13 @@ import { ToolboxItemsRow } from "@/components/ToolboxItemsRow";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { hobbies, toolBoxItems } from "../../profile.config";
-import { aboutSectionId } from "./constants";
 
-export const AboutSection = () => {
+export const AboutSection = ({ id }: { id: string }) => {
     const constraintRef = useRef(null);
 
     return (
         <div className="py-20 md:py-14 lg:py-20 lg:mt-3">
-            <section className="container" id={aboutSectionId}>
+            <section className="container" id={id}>
                 <SectionHeader
                     heading1="About Me"
                     heading2="A Glimpse Into My World"

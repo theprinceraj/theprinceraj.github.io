@@ -5,11 +5,11 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
-import { heroSectionId } from "./constants";
+import { contactSectionId, projectsSectionId } from "./constants";
 
-export const HeroSection = () => {
+export const HeroSection = ({ id }: { id: string }) => {
     return (
-        <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip" id={heroSectionId}>
+        <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip" id={id}>
             <div
                 className="absolute inset-0"
                 style={{
@@ -117,14 +117,18 @@ export const HeroSection = () => {
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
-                    <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-                        <span className="font-semibold">Explore My Work</span>
-                        <ArrowDown className="size-4" />
-                    </button>
-                    <button className="inline-flex items-center gap-2 px-6 h-12 border border-white text-gray-900 bg-white rounded-xl">
-                        <span>👋</span>
-                        <span className="font-semibold">Let&apos;s Connect</span>
-                    </button>
+                    <a href={"#" + projectsSectionId}>
+                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+                            <span className="font-semibold">Explore My Work</span>
+                            <ArrowDown className="size-4" />
+                        </button>
+                    </a>
+                    <a href={"#" + contactSectionId}>
+                        <button className="inline-flex items-center gap-2 px-6 h-12 border border-white text-gray-900 bg-white rounded-xl">
+                            <span>👋</span>
+                            <span className="font-semibold">Let&apos;s Connect</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
