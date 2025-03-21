@@ -12,7 +12,7 @@
         "@svgr/webpack": "^8.1.0",
         "caniuse-lite": "^1.0.30001706",
         "framer-motion": "^11.3.21",
-        "next": "^14.2.24",
+        "next": "^15.2.3",
         "react": "^18",
         "react-dom": "^18",
         "sharp": "^0.33.5",
