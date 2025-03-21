@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/",
   output: 'export',
   webpack(config) {
     // Grab the existing rule that handles SVG imports
