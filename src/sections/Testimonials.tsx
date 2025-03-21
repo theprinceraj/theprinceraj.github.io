@@ -3,11 +3,11 @@ import Image from "next/image";
 import { Card } from "@/components/Card";
 import { Fragment } from "react";
 import { testimonials } from "../../profile.config";
-
+import { testimonialsSectionId } from "./constants";
 export const TestimonialsSection = () => {
     return (
         <div className="py-16 lg:py-24">
-            <section className="container">
+            <section className="container" id={testimonialsSectionId}>
                 <SectionHeader
                     heading1="Happy Clients"
                     heading2="What Clients Say About Me"
