@@ -1,25 +1,34 @@
-import SquareJsIcon from "@/assets/icons/square-js.svg";
-import HTML5Icon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import NestIcon from "@/assets/icons/nest.svg";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import SquareJsIcon from "@/assets/icons/toolbox/square-js.svg";
+import SquareTsIcon from "@/assets/icons/toolbox/square-ts.svg";
+import SolidityIcon from "@/assets/icons/toolbox/Solidity.svg";
+import HTML5Icon from "@/assets/icons/toolbox/html5.svg";
+import CssIcon from "@/assets/icons/toolbox/css3.svg";
+import ReactIcon from "@/assets/icons/toolbox/react.svg";
+import ElectronIcon from "@/assets/icons/toolbox/electron.svg";
+import GitIcon from "@/assets/icons/toolbox/git.svg";
+import PolypaneIcon from "@/assets/icons/toolbox/polypane.svg";
+import FirebaseIcon from "@/assets/icons/toolbox/firebase.svg";
+import GithubIcon from "@/assets/icons/toolbox/github.svg";
+import BunIcon from "@/assets/icons/toolbox/bun.svg";
+import PostmanIcon from "@/assets/icons/toolbox/postman.svg";
+import TailwindIcon from "@/assets/icons/toolbox/tailwind.svg";
+import MongoDBIcon from "@/assets/icons/toolbox/mongo-db.svg";
+import ViteIcon from "@/assets/icons/toolbox/vite.svg";
+import VSCodeIcon from "@/assets/icons/toolbox/vs-code.svg";
+import VercelIcon from "@/assets/icons/toolbox/vercel.svg";
+import SwaggerIcon from "@/assets/icons/toolbox/swagger.svg";
+import NodeJsIcon from "@/assets/icons/toolbox/node-js.svg";
+import NestIcon from "@/assets/icons/toolbox/nest.svg";
+import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
+import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
+import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
 const CONFIG = {
+    email: "profile.princeraj@gmail.com",
     toolboxItems: [
-        {
-            title: "JavaScript",
-            iconType: SquareJsIcon,
-        },
         {
             title: "HTML5",
             iconType: HTML5Icon,
@@ -29,26 +38,86 @@ const CONFIG = {
             iconType: CssIcon,
         },
         {
+            title: "JavaScript",
+            iconType: SquareJsIcon,
+        },
+        {
+            title: "TypeScript",
+            iconType: SquareTsIcon,
+        },
+        {
+            title: "Bun",
+            iconType: BunIcon,
+        },
+        {
+            title: "Node.js",
+            iconType: NodeJsIcon,
+        },
+        {
+            title: "Tailwind CSS",
+            iconType: TailwindIcon,
+        },
+        {
+            title: "Solidity",
+            iconType: SolidityIcon,
+        },
+        {
             title: "Nest",
             iconType: NestIcon,
+        },
+        {
+            title: "Swagger",
+            iconType: SwaggerIcon,
+        },
+        {
+            title: "Electron",
+            iconType: ElectronIcon,
+        },
+        {
+            title: "Postman",
+            iconType: PostmanIcon,
         },
         {
             title: "React",
             iconType: ReactIcon,
         },
         {
-            title: "Chrome",
-            iconType: ChromeIcon,
+            title: "Vite",
+            iconType: ViteIcon,
+        },
+        {
+            title: "MongoDB",
+            iconType: MongoDBIcon,
+        },
+        {
+            title: "Firebase",
+            iconType: FirebaseIcon,
+        },
+        {
+            title: "Polypane",
+            iconType: PolypaneIcon,
+        },
+        {
+            title: "Git",
+            iconType: GitIcon,
         },
         {
             title: "Github",
             iconType: GithubIcon,
         },
+        {
+            title: "Visual Studio Code",
+            iconType: VSCodeIcon,
+        },
+        {
+            title: "Vercel",
+            iconType: VercelIcon,
+        },
     ],
     hobbies: [
         {
-            title: "Painting",
-            emoji: "🎨",
+            title: "Singing Alone",
+            emoji: "🎤",
             left: "5%",
             top: "3%",
             zIndex: 0,
@@ -68,21 +137,21 @@ const CONFIG = {
             zIndex: 0,
         },
         {
-            title: "Hiking",
-            emoji: "🥾",
+            title: "Music",
+            emoji: "🎵",
             left: "35%",
             top: "40%",
             zIndex: -10,
         },
         {
-            title: "Music",
-            emoji: "🎵",
+            title: "Meetups",
+            emoji: "👥",
             left: "70%",
             top: "45%",
             zIndex: 0,
         },
         {
-            title: "Fitness",
+            title: "Workout & Fitness",
             emoji: "🏋️",
             left: "5%",
             top: "65%",
@@ -98,58 +167,57 @@ const CONFIG = {
     ],
     footerLinks: [
         {
-            title: "Youtube",
-            href: "#",
-        },
-        {
             title: "Twitter",
-            href: "#",
+            href: "https://x.com/theprinceraj",
         },
         {
-            title: "Instagram",
-            href: "#",
+            title: "Github",
+            href: "https://github.com/theprinceraj",
         },
         {
             title: "LinkedIn",
-            href: "#",
+            href: "https://www.linkedin.com/in/theprinceraj",
         },
     ],
     portfolioProjects: [
         {
-            company: "Acme Corp",
-            year: "2022",
-            title: "Dark Saas Landing Page",
+            company: "Local Social",
+            year: "2025",
+            title: "Backend for Social Media Platform",
             results: [
-                { title: "Enhanced user experience by 40%" },
-                { title: "Improved site speed by 50%" },
-                { title: "Increased mobile traffic by 35%" },
+                { title: "Encompassing 30+ endpoints" },
+                { title: "Implemented 5+ core features" },
+                { title: "Database incorporating geospatial data" },
             ],
-            link: "https://youtu.be/4k7IdSLxh6w",
-            image: darkSaasLandingPage,
+            link: "/images/flowchart-local-social.png",
+            image: localSocialPostmanPage,
+            linkText: "View Flowchart",
         },
         {
-            company: "Innovative Co",
-            year: "2021",
-            title: "Light Saas Landing Page",
+            company: "Markshify",
+            year: "2024",
+            title: "OCR-Based Marksheet Scanner",
             results: [
-                { title: "Boosted sales by 20%" },
-                { title: "Expanded customer reach by 35%" },
-                { title: "Increased brand awareness by 15%" },
+                { title: "Automated marksheet to CSV conversion" },
+                { title: "Extracts 20+ fields of data" },
+                { title: "Custom utility functions for data extraction" },
             ],
-            link: "https://youtu.be/7hi5zwO75yc",
-            image: lightSaasLandingPage,
+            link: "https://github.com/theprinceraj/Markshify",
+            image: markshifyLandingPage,
+            linkText: "View Code",
         },
         {
-            company: "Quantum Dynamics",
+            company: "Profile Cards API",
             year: "2023",
-            title: "AI Startup Landing Page",
+            title: "Dynamic Profile Cards",
             results: [
-                { title: "Enhanced user experience by 40%" },
-                { title: "Improved site speed by 50%" },
-                { title: "Increased mobile traffic by 35%" },
+                { title: "Sharable and personalized profile cards" },
+                { title: "With debouncing and field validation" },
+                { title: "99.95% uptime leveraging Vercel" },
             ],
-            link: "https://youtu.be/Z7I5uSRHMHg",
-            image: aiStartupLandingPage,
+            link: "https://prince.is-a.dev/Profile-Cards-API/",
+            image: profileCardsGeneratorPage,
+            linkText: "View Live Site",
         },
     ],
     testimonials: [
@@ -160,10 +228,10 @@ const CONFIG = {
             avatar: memojiAvatar1,
         },
         {
-            name: "Olivia Green",
-            position: "Head of Design @ GreenLeaf",
-            text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-            avatar: memojiAvatar2,
+            name: "Shanzil",
+            position: "Marketing Head @ TotalEdge",
+            text: "Prince has been one of the best backened developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club",
+            avatar: shanzilAvatar,
         },
         {
             name: "Daniel White",
@@ -171,21 +239,10 @@ const CONFIG = {
             text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
             avatar: memojiAvatar3,
         },
-        {
-            name: "Emily Carter",
-            position: "Product Manager @ GlobalTech",
-            text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-            avatar: memojiAvatar4,
-        },
-        {
-            name: "Michael Brown",
-            position: "Director of IT @ MegaCorp",
-            text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-            avatar: memojiAvatar5,
-        },
     ],
 };
 
+export const email = CONFIG.email;
 export const toolBoxItems = CONFIG.toolboxItems;
 export const hobbies = CONFIG.hobbies;
 export const footerLinks = CONFIG.footerLinks;

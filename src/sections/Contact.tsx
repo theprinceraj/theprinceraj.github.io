@@ -1,5 +1,6 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { email } from "../../profile.config";
 
 export const ContactSection = ({ id }: { id: string }) => {
     return (
@@ -21,12 +22,12 @@ export const ContactSection = ({ id }: { id: string }) => {
                                 you achieve your goals.
                             </p>
                         </div>
-                        <div>
+                        <a href={`mailto:${email}`}>
                             <button className="bg-gray-900 text-white inline-flex items-center gap-2 px-6 h-12 rounded-xl w-max">
                                 <span className="font-semibold">Contact Me</span>
                                 <ArrowUpRightIcon className="size-4" />
                             </button>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>

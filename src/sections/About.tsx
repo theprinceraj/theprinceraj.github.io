@@ -1,8 +1,8 @@
 "use client";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
-import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
+import bookImage from "@/assets/images/srimad-bhagavad-gita-cover.webp";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
@@ -27,13 +27,13 @@ export const AboutSection = ({ id }: { id: string }) => {
                         <Card className="h-[320px] md:col-span-2 lg:col-span-1">
                             <CardHeader
                                 heading="My Reads"
-                                description="Explore the books shaping my perspectives."
+                                description="Explore the book shaping my perspectives."
                                 className="md:py-2.5 md:px-4 lg:px-4 lg:py-1.5"
                             />
                             <Image
                                 src={bookImage}
                                 alt="Book Cover Image"
-                                className="w-40 mx-auto mt-6 md:mt-3 lg:pt-1"
+                                className="w-40 mx-auto mt-6 md:mt-3 lg:pt-1 rounded-xl"
                             />
                         </Card>
                         <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">

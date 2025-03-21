@@ -43,9 +43,9 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <a href={project.link}>
+                                    <a href={project.link} target="_blank">
                                         <button className="bg-white text-gray-950 h-12 rounded-xl w-full md:w-auto md:px-6 my-8 font-semibold inline-flex items-center justify-center gap-2">
-                                            <span>Visit Live Site</span>
+                                            <span>{project.linkText}</span>
                                             <ArrowUpRightIcon className="size-4" />
                                         </button>
                                     </a>
@@ -54,7 +54,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                     <Image
                                         src={project.image}
                                         alt={project.title}
-                                        className="-mb-4 md:-mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                                        className="-mb-4 md:-mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none border-2 border-white/10 rounded-xl"
                                     />
                                 </div>
                             </div>

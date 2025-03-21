@@ -26,7 +26,7 @@ export const TestimonialsSection = () => {
                                         key={testimonial.name}
                                         className="max-w-xs md:max-w-md md:p-8 hover:-rotate-3 transition duration-300">
                                         <div className="flex items-center gap-4">
-                                            <div className="inline-flex items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0">
+                                            <div className="inline-flex items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0 overflow-hidden">
                                                 <Image
                                                     src={testimonial.avatar}
                                                     alt={testimonial.name}
