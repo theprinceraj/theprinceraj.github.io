@@ -1,6 +1,6 @@
 import SquareJsIcon from "@/assets/icons/toolbox/square-js.svg";
 import SquareTsIcon from "@/assets/icons/toolbox/square-ts.svg";
-import SolidityIcon from "@/assets/icons/toolbox/Solidity.svg";
+import SolidityIcon from "@/assets/icons/toolbox/solidity.svg";
 import HTML5Icon from "@/assets/icons/toolbox/html5.svg";
 import CssIcon from "@/assets/icons/toolbox/css3.svg";
 import ReactIcon from "@/assets/icons/toolbox/react.svg";
