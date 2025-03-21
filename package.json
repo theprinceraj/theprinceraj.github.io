@@ -11,7 +11,7 @@
     "dependencies": {
         "@svgr/webpack": "^8.1.0",
         "caniuse-lite": "^1.0.30001706",
-        "framer-motion": "^11.3.21",
+        "framer-motion": "^12.5.0",
         "next": "^14.2.24",
         "react": "^18",
         "react-dom": "^18",
