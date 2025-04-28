@@ -22,8 +22,8 @@ import NestIcon from "@/assets/icons/toolbox/nest.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
+import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
 const CONFIG = {
@@ -222,10 +222,10 @@ const CONFIG = {
     ],
     testimonials: [
         {
-            name: "Alex Turner",
-            position: "Marketing Manager @ TechStartups",
-            text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-            avatar: memojiAvatar1,
+            name: "Savan",
+            position: "Owner @ Grown Up Marketing",
+            text: "I just wanted to take a moment to say a big thank you for creating my marketing agency's website. It’s live now and I absolutely love your work — it's even better than I imagined! I really appreciate the effort and creativity you put into it. From now on, whatever projects I get through my agency, I would love to work with you. Looking forward to doing some amazing work together!",
+            avatar: grownUpMarketingAvatar,
         },
         {
             name: "Shanzil",
