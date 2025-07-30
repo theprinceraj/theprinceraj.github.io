@@ -12,7 +12,7 @@
 
 This is a modern, responsive portfolio website built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It serves as a personal homepage, project showcase, and contact point for <b>@theprinceraj</b>.
 
-- **Live Demo:** [prince.is-a.dev]](https://prince.is-a.dev)
+- **Live Demo:** [prince.is-a.dev](https://prince.is-a.dev)
 
 ## ✨ Features
 
