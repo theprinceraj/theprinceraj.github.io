@@ -20,6 +20,7 @@ import SwaggerIcon from "@/assets/icons/toolbox/swagger.svg";
 import NodeJsIcon from "@/assets/icons/toolbox/node-js.svg";
 import NestIcon from "@/assets/icons/toolbox/nest.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
+import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
 import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -180,6 +181,20 @@ const CONFIG = {
         },
     ],
     portfolioProjects: [
+        {
+            company: "Cover Genius",
+            year: "2025",
+            title: "AI-Powered Cover Letter Assistant",
+            results: [
+                { title: "Built an AI-driven system to generate tailored cover letters in seconds" },
+                { title: "Integrated PDF resume analysis for personalized content generation" },
+                { title: "Implemented secure authentication with email verification and guest modes" },
+                { title: "Developed credit-based generation system with Razorpay and PayPal support" }
+          ],
+          link: "https://covergenius.is-a.software",
+          image: coverGeniusPage,
+        linkText: "View Live Site"
+        },
         {
             company: "Local Social",
             year: "2025",
