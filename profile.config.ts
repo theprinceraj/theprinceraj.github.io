@@ -23,7 +23,7 @@ import localSocialPostmanPage from "@/assets/images/local-social-postman-page.pn
 import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
 import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
+import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.png";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
@@ -189,11 +189,11 @@ const CONFIG = {
                 { title: "Built an AI-driven system to generate tailored cover letters in seconds" },
                 { title: "Integrated PDF resume analysis for personalized content generation" },
                 { title: "Implemented secure authentication with email verification and guest modes" },
-                { title: "Developed credit-based generation system with Razorpay and PayPal support" }
-          ],
-          link: "https://covergenius.is-a.software",
-          image: coverGeniusPage,
-        linkText: "View Live Site"
+                { title: "Developed credit-based generation system with Razorpay and PayPal support" },
+            ],
+            link: "https://covergenius.is-a.software",
+            image: coverGeniusPage,
+            linkText: "View Live Site",
         },
         {
             company: "Local Social",
@@ -249,10 +249,10 @@ const CONFIG = {
             avatar: shanzilAvatar,
         },
         {
-            name: "Daniel White",
-            position: "CEO @ InnovateCo",
-            text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-            avatar: memojiAvatar3,
+            name: "Ayush Yadav",
+            position: "Prince's College Friend",
+            text: "Prince is someone who always stands out for his problem solving skills and creativity. He takes on challenges with a lot of determination. More than that, he is a supportive friend and a great teammate to work with.",
+            avatar: ayushYadavAvatar,
         },
     ],
 };
