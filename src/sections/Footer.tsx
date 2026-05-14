@@ -8,6 +8,7 @@ export const Footer = () => {
                 className="absolute h-[400px] w-[1600px] bottom-0 -z-10 left-1/2 -translate-x-1/2 bg-emerald-300/30"
                 style={{
                     maskImage: `radial-gradient(50% 50% at bottom center, black, transparent)`,
+                    WebkitMaskImage: `radial-gradient(50% 50% at bottom center, black, transparent)`,
                 }}></div>
             <div className="container">
                 <div className="border-t border-white/15 py-6 md:pb-8 text-sm flex flex-col md:flex-row items-center md:justify-between gap-8">

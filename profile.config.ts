@@ -29,6 +29,32 @@ import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
 const CONFIG = {
     email: "profile.princeraj@gmail.com",
+    blogs: [
+        {
+            title: "How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?",
+            description:
+                "Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.",
+            date: "Jan 1, 2026",
+            link: "https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217",
+            niche: "Backend Authentication",
+        },
+        {
+            title: "NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API",
+            description:
+                "We gotta understand first, how does Razorpay handles and processes payments? Turns out Razorpay has made it pretty simple to handle payments on our apps.",
+            date: "Dec 6, 2025",
+            link: "https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462",
+            niche: "Payment Integration",
+        },
+        {
+            title: "How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters",
+            description:
+                "On popular social media platforms like Instagram, even if it says that an account exists with a username, there might be no account with that username in the database. Surprised? Let's learn about this amazing probabilistic data structure called Bloom Filters.",
+            date: "Aug 30, 2025",
+            link: "https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973",
+            niche: "Data Structures",
+        },
+    ],
     toolboxItems: [
         {
             title: "HTML5",
@@ -258,6 +284,7 @@ const CONFIG = {
 };
 
 export const email = CONFIG.email;
+export const blogs = CONFIG.blogs;
 export const toolBoxItems = CONFIG.toolboxItems;
 export const hobbies = CONFIG.hobbies;
 export const footerLinks = CONFIG.footerLinks;
