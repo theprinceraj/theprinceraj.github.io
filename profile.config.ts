@@ -23,8 +23,10 @@ import localSocialPostmanPage from "@/assets/images/local-social-postman-page.pn
 import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
 import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
-import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.png";
+import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.webp";
+import rohanSinghAvatar from "@/assets/images/rohan-singh-avatar.webp";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
+import deepakKumarAvatar from "@/assets/images/deepak-kumar-avatar.webp";
 import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
 const CONFIG = {
@@ -263,22 +265,34 @@ const CONFIG = {
     ],
     testimonials: [
         {
+            name: "Shanzil",
+            position: "Marketing Head @ TotalEdge",
+            text: "Prince has been one of the best backend developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club",
+            avatar: shanzilAvatar,
+        },
+        {
             name: "Savan",
             position: "Owner @ Grown Up Marketing",
             text: "I just wanted to take a moment to say a big thank you for creating my marketing agency's website. It’s live now and I absolutely love your work — it's even better than I imagined! I really appreciate the effort and creativity you put into it. From now on, whatever projects I get through my agency, I would love to work with you. Looking forward to doing some amazing work together!",
             avatar: grownUpMarketingAvatar,
         },
         {
-            name: "Shanzil",
-            position: "Marketing Head @ TotalEdge",
-            text: "Prince has been one of the best backened developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club",
-            avatar: shanzilAvatar,
+            name: "Rohan Singh",
+            position: "Founder @ MindMates.in",
+            text: "Prince is an exceptionally skilled and dependable backend developer. He tackles complex systems with ease and always delivers clean, scalable solutions. Beyond his technical strengths, he consistently supports the team and steps in whenever needed, making him a truly reliable and collaborative teammate. I’d highly recommend working with him.",
+            avatar: rohanSinghAvatar,
         },
         {
             name: "Ayush Yadav",
             position: "Prince's College Friend",
             text: "Prince is someone who always stands out for his problem solving skills and creativity. He takes on challenges with a lot of determination. More than that, he is a supportive friend and a great teammate to work with.",
             avatar: ayushYadavAvatar,
+        },
+        {
+            name: "Deepak Kumar",
+            position: "Prince's College Friend",
+            text: "It's rare to come across someone like Prince , a developer who not only writes exceptional code but also brings humility, patience, and genuine passion into every project.",
+            avatar: deepakKumarAvatar,
         },
     ],
 };
