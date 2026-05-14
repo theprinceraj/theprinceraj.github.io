@@ -36,20 +36,20 @@ const CONFIG = {
                 "Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.",
             date: "Jan 1, 2026",
             link: "https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217",
-            niche: "Backend Authentication",
+            niche: "Backend Auth",
         },
         {
             title: "NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API",
             description:
-                "We gotta understand first, how does Razorpay handles and processes payments? Turns out Razorpay has made it pretty simple to handle payments on our apps.",
+                "A practical, step-by-step guide to integrating Razorpay with a NestJS backend. This article explains some payment concepts you need to know (orders, payments, and security), shows how to configure Razorpay credentials, implements server-side payment creation and verification. Ideal for backend developers looking to add payment flows to their APIs without getting lost in the docs.",
             date: "Dec 6, 2025",
             link: "https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462",
-            niche: "Payment Integration",
+            niche: "Payment Setup",
         },
         {
             title: "How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters",
             description:
-                "On popular social media platforms like Instagram, even if it says that an account exists with a username, there might be no account with that username in the database. Surprised? Let's learn about this amazing probabilistic data structure called Bloom Filters.",
+                "On popular social media platforms like Instagram, checking whether a username is available has to happen almost instantly, even when the system is handling millions or billions of accounts. Instead of searching linearly, Bloom Filters are used to quickly rule out usernames that definitely do not exist and narrow the search. This makes availability checks much faster and more efficient. Let's explore how this probabilistic data structure works!",
             date: "Aug 30, 2025",
             link: "https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973",
             niche: "Data Structures",
