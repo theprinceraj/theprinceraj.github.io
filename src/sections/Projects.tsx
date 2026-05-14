@@ -1,9 +1,8 @@
 import Image from "next/image";
-import CheckIcon from "@/assets/icons/check-circle.svg";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import { portfolioProjects } from "../../profile.config";
+import { ArrowUpRightIcon, CheckCircle2Icon } from "lucide-react";
 
 export const ProjectsSection = ({ id }: { id: string }) => {
     return (
@@ -38,7 +37,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                             <li
                                                 key={result.title}
                                                 className="inline-flex gap-2 text-white/50 font-light text-sm md:text-base">
-                                                <CheckIcon className="size-5 md:size-6" />
+                                                <CheckCircle2Icon className="size-5 md:size-6" />
                                                 <span>{result.title}</span>
                                             </li>
                                         ))}

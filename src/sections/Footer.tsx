@@ -1,4 +1,4 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { ArrowUpRightIcon } from "lucide-react";
 import { footerLinks } from "../../profile.config";
 
 export const Footer = () => {
