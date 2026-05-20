@@ -34,7 +34,12 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/bun.lockb" ]; then
+            echo "manager=bun" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=bun" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
@@ -49,10 +54,16 @@ jobs:
             exit 1
           fi
       - name: Setup Node
+        if: ${{ steps.detect-package-manager.outputs.manager != 'bun' }}
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Setup Bun
+        if: ${{ steps.detect-package-manager.outputs.manager == 'bun' }}
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
