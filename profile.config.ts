@@ -219,7 +219,7 @@ const CONFIG = {
                 { title: "Implemented secure authentication with email verification and guest modes" },
                 { title: "Developed credit-based generation system with Razorpay and PayPal support" },
             ],
-            link: "https://covergenius.is-a.software",
+            link: "https://cv.theprinceraj.tech",
             image: coverGeniusPage,
             linkText: "View Live Site",
         },

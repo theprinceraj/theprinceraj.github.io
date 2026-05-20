@@ -1,4 +1,5 @@
 "use client";
+import BlogHomepagePopup from "@/components/BlogPopup";
 import { AboutSection } from "@/sections/About";
 import { aboutSectionId, contactSectionId, heroSectionId, projectsSectionId } from "@/sections/constants";
 import { ContactSection } from "@/sections/Contact";
@@ -20,6 +21,7 @@ export default function Home() {
             <TestimonialsSection />
             <AboutSection id={aboutSectionId} />
             <ContactSection id={contactSectionId} />
+            <BlogHomepagePopup />
             <Footer />
         </>
     );

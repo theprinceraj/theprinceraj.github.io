@@ -51,6 +51,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                 </div>
                                 <div className="relative">
                                     <Image
+                                        loading="eager"
                                         src={project.image}
                                         alt={project.title}
                                         className="-mb-4 md:-mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none border-2 border-white/10 rounded-xl"

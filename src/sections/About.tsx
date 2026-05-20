@@ -45,12 +45,12 @@ export const AboutSection = ({ id }: { id: string }) => {
                             <ToolboxItemsRow
                                 items={toolBoxItems}
                                 className="mt-4 md:mt-6"
-                                itemsWrapperClassName="animate-scroll-left [animation-duration:30s]"
+                                itemsWrapperClassName="animate-scroll-left [animation-duration:40s]"
                             />
                             <ToolboxItemsRow
                                 items={toolBoxItems}
                                 className="mt-6"
-                                itemsWrapperClassName="animate-scroll-right [animation-duration:15s]"
+                                itemsWrapperClassName="animate-scroll-right [animation-duration:20s]"
                             />
                         </Card>
                     </div>

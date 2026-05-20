@@ -40,7 +40,7 @@ export const Header = ({
                 }, 1000); // 1 second delay should cover most scroll animations
             }
         },
-        [setActiveSectionId, yOffset]
+        [setActiveSectionId, yOffset],
     );
 
     useEffect(() => {
@@ -91,8 +91,6 @@ export const Header = ({
                 if (inSection) {
                     if (section.id !== activeSectionId) {
                         setActiveSectionId(section.id);
-                        // Update URL hash without triggering scroll
-                        window.history.replaceState(null, "", `#${section.id}`);
                     }
                     break;
                 }
@@ -117,7 +115,7 @@ export const Header = ({
                 window.history.pushState(null, "", `#${targetId}`);
             }
         },
-        [scrollToSection]
+        [scrollToSection],
     );
 
     return (
