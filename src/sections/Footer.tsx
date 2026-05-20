@@ -12,7 +12,7 @@ export const Footer = () => {
                 }}></div>
             <div className="container">
                 <div className="border-t border-white/15 py-6 md:pb-8 text-sm flex flex-col md:flex-row items-center md:justify-between gap-8">
-                    <div className="text-white/40">&copy; 2024. All rights reserved.</div>
+                    <div className="text-white/40">&copy; {new Date().getFullYear()}. All rights reserved.</div>
                     <nav className="flex flex-col md:flex-row gap-8 items-center">
                         {footerLinks.map((footerLink) => (
                             <a
