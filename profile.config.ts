@@ -19,8 +19,15 @@ import VercelIcon from "@/assets/icons/toolbox/vercel.svg";
 import SwaggerIcon from "@/assets/icons/toolbox/swagger.svg";
 import NodeJsIcon from "@/assets/icons/toolbox/node-js.svg";
 import NestIcon from "@/assets/icons/toolbox/nest.svg";
+import ShopifyIcon from "@/assets/icons/toolbox/shopify.svg";
+import CloudflareIcon from "@/assets/icons/toolbox/cloudflare.svg";
+import CloudinaryIcon from "@/assets/icons/toolbox/cloudinary.svg";
+import AwsIcon from "@/assets/icons/toolbox/aws.svg";
+import AzureIcon from "@/assets/icons/toolbox/azure.svg";
+import FigmaIcon from "@/assets/icons/toolbox/figma.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
+import theLoudWardrobePage from "@/assets/images/the-loud-wardrobe-page.webp";
 import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.webp";
@@ -127,6 +134,10 @@ const CONFIG = {
             iconType: PolypaneIcon,
         },
         {
+            title: "Figma",
+            iconType: FigmaIcon,
+        },
+        {
             title: "Git",
             iconType: GitIcon,
         },
@@ -141,6 +152,26 @@ const CONFIG = {
         {
             title: "Vercel",
             iconType: VercelIcon,
+        },
+        {
+            title: "Shopify",
+            iconType: ShopifyIcon,
+        },
+        {
+            title: "Cloudflare",
+            iconType: CloudflareIcon,
+        },
+        {
+            title: "Cloudinary",
+            iconType: CloudinaryIcon,
+        },
+        {
+            title: "AWS",
+            iconType: AwsIcon,
+        },
+        {
+            title: "Azure",
+            iconType: AzureIcon,
         },
     ],
     hobbies: [
@@ -210,6 +241,19 @@ const CONFIG = {
     ],
     portfolioProjects: [
         {
+            company: "The Loud Wardrobe",
+            year: "2026",
+            title: "Fashion E-commerce Store",
+            results: [
+                { title: "Engineered a scalable Shopify storefront for a fashion brand" },
+                { title: "Integrated payment, shipping, and order fulfillment workflows" },
+                { title: "Configured analytics and conversion tracking infrastructure" },
+            ],
+            link: "https://theloudwardrobe.com",
+            image: theLoudWardrobePage,
+            linkText: "View Live Site",
+        },
+        {
             company: "Cover Genius",
             year: "2025",
             title: "AI-Powered Cover Letter Assistant",
@@ -226,11 +270,12 @@ const CONFIG = {
         {
             company: "Local Social",
             year: "2025",
-            title: "Backend for Social Media Platform",
+            title: "Scalable Backend for Social Media Platform",
             results: [
-                { title: "Encompassing 30+ endpoints" },
-                { title: "Implemented 5+ core features" },
-                { title: "Database incorporating geospatial data" },
+                { title: "Engineered a modular NestJS backend powering 30+ production-grade APIs" },
+                { title: "Built social features including authentication, feeds, profiles, and hashtags" },
+                { title: "Designed the complete database architecture" },
+                { title: "Integrated geospatial querying for location-aware content discovery" },
             ],
             link: "/images/flowchart-local-social.png",
             image: localSocialPostmanPage,
