@@ -23,12 +23,40 @@ import localSocialPostmanPage from "@/assets/images/local-social-postman-page.pn
 import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
 import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
-import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.png";
+import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.webp";
+import rohanSinghAvatar from "@/assets/images/rohan-singh-avatar.webp";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
+import deepakKumarAvatar from "@/assets/images/deepak-kumar-avatar.webp";
 import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
 const CONFIG = {
     email: "profile.princeraj@gmail.com",
+    blogs: [
+        {
+            title: "How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?",
+            description:
+                "Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.",
+            date: "1 Jan '26",
+            link: "https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217",
+            niche: "Backend Auth",
+        },
+        {
+            title: "NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API",
+            description:
+                "A practical, step-by-step guide to integrating Razorpay with a NestJS backend. This article explains some payment concepts you need to know (orders, payments, and security), shows how to configure Razorpay credentials, implements server-side payment creation and verification. Ideal for backend developers looking to add payment flows to their APIs without getting lost in the docs.",
+            date: "6 Dec '25",
+            link: "https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462",
+            niche: "Payment Setup",
+        },
+        {
+            title: "How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters",
+            description:
+                "On popular social media platforms like Instagram, checking whether a username is available has to happen almost instantly, even when the system is handling millions or billions of accounts. Instead of searching linearly, Bloom Filters are used to quickly rule out usernames that definitely do not exist and narrow the search. This makes availability checks much faster and more efficient. Let's explore how this probabilistic data structure works!",
+            date: "30 Aug '25",
+            link: "https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973",
+            niche: "Data Structures",
+        },
+    ],
     toolboxItems: [
         {
             title: "HTML5",
@@ -237,16 +265,22 @@ const CONFIG = {
     ],
     testimonials: [
         {
+            name: "Shanzil",
+            position: "Marketing Head @ TotalEdge",
+            text: "Prince has been one of the best backend developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club",
+            avatar: shanzilAvatar,
+        },
+        {
             name: "Savan",
             position: "Owner @ Grown Up Marketing",
             text: "I just wanted to take a moment to say a big thank you for creating my marketing agency's website. It’s live now and I absolutely love your work — it's even better than I imagined! I really appreciate the effort and creativity you put into it. From now on, whatever projects I get through my agency, I would love to work with you. Looking forward to doing some amazing work together!",
             avatar: grownUpMarketingAvatar,
         },
         {
-            name: "Shanzil",
-            position: "Marketing Head @ TotalEdge",
-            text: "Prince has been one of the best backened developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club",
-            avatar: shanzilAvatar,
+            name: "Rohan Singh",
+            position: "Founder @ MindMates.in",
+            text: "Prince is an exceptionally skilled and dependable backend developer. He tackles complex systems with ease and always delivers clean, scalable solutions. Beyond his technical strengths, he consistently supports the team and steps in whenever needed, making him a truly reliable and collaborative teammate. I’d highly recommend working with him.",
+            avatar: rohanSinghAvatar,
         },
         {
             name: "Ayush Yadav",
@@ -254,10 +288,17 @@ const CONFIG = {
             text: "Prince is someone who always stands out for his problem solving skills and creativity. He takes on challenges with a lot of determination. More than that, he is a supportive friend and a great teammate to work with.",
             avatar: ayushYadavAvatar,
         },
+        {
+            name: "Deepak Kumar",
+            position: "Prince's College Friend",
+            text: "It's rare to come across someone like Prince , a developer who not only writes exceptional code but also brings humility, patience, and genuine passion into every project.",
+            avatar: deepakKumarAvatar,
+        },
     ],
 };
 
 export const email = CONFIG.email;
+export const blogs = CONFIG.blogs;
 export const toolBoxItems = CONFIG.toolboxItems;
 export const hobbies = CONFIG.hobbies;
 export const footerLinks = CONFIG.footerLinks;

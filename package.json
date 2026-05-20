@@ -3,19 +3,21 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
         "@svgr/webpack": "^8.1.0",
-        "caniuse-lite": "^1.0.30001706",
+        "baseline-browser-mapping": "^2.10.29",
+        "caniuse-lite": "^1.0.30001792",
         "framer-motion": "^11.3.21",
-        "next": "^14.2.24",
+        "lucide-react": "^1.14.0",
+        "next": "^16.2.6",
         "react": "^18",
         "react-dom": "^18",
-        "sharp": "^0.33.5",
+        "sharp": "^0.34.5",
         "tailwind-merge": "^2.4.0"
     },
     "devDependencies": {

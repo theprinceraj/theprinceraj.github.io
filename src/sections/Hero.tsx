@@ -1,11 +1,11 @@
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { contactSectionId, projectsSectionId } from "./constants";
+import { ArrowDownIcon } from "lucide-react";
 
 export const HeroSection = ({ id }: { id: string }) => {
     return (
@@ -120,7 +120,7 @@ export const HeroSection = ({ id }: { id: string }) => {
                     <a href={"#" + projectsSectionId}>
                         <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
                             <span className="font-semibold">Explore My Work</span>
-                            <ArrowDown className="size-4" />
+                            <ArrowDownIcon className="size-4" />
                         </button>
                     </a>
                     <a href={"#" + contactSectionId}>

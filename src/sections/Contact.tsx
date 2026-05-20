@@ -1,6 +1,6 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { email } from "../../profile.config";
+import { ArrowUpRightIcon } from "lucide-react";
 
 export const ContactSection = ({ id }: { id: string }) => {
     return (
