@@ -246,13 +246,13 @@ const CONFIG = {
             title: "AI Governance Proxy",
             results: [
                 {
-                    title: "Built a real-time AI governance proxy that intercepts and validates all requests between applications and LLM APIs before they reach the model",
+                    title: "Built a low-latency AI governance proxy to intercept and validate all application-to-LLM API requests",
                 },
                 {
-                    title: "Engineered a PII detection and redaction engine using Microsoft Presidio capable of identifying and masking 50+ sensitive data types including emails, credit card numbers and API keys",
+                    title: "Integrated Microsoft Presidio to automatically detect and redact 50+ PII and sensitive data types",
                 },
                 {
-                    title: "Implemented a live governance logging system providing deep visibility into semantic intent, policy triggers, and emergent AI safety risks.",
+                    title: "Designed a live governance log providing real-time visibility into semantic intent and safety risks",
                 },
             ],
             link: "https://sentinel.theprinceraj.tech",
@@ -277,8 +277,7 @@ const CONFIG = {
             year: "2025",
             title: "AI-Powered Cover Letter Assistant",
             results: [
-                { title: "Built an AI-driven system to generate tailored cover letters in seconds" },
-                { title: "Integrated PDF resume analysis for personalized content generation" },
+                { title: "Built an AI-driven system to generate tailored cover letters with resume PDF analysis in seconds" },
                 { title: "Implemented secure authentication with email verification and guest modes" },
                 { title: "Developed credit-based generation system with Razorpay and PayPal support" },
             ],
@@ -293,8 +292,7 @@ const CONFIG = {
             results: [
                 { title: "Engineered a modular NestJS backend powering 30+ production-grade APIs" },
                 { title: "Built social features including authentication, feeds, profiles, and hashtags" },
-                { title: "Designed the complete database architecture" },
-                { title: "Integrated geospatial querying for location-aware content discovery" },
+                { title: "Designed the complete database architecture with geospatial querying for location-aware content discovery" },
             ],
             link: "/images/flowchart-local-social.png",
             image: localSocialPostmanPage,
@@ -305,7 +303,7 @@ const CONFIG = {
             year: "2024",
             title: "OCR-Based Marksheet Scanner",
             results: [
-                { title: "Automated batch conversion of scanned marksheets into structured CSV to eliminate manual data entry" },
+                { title: "Automated conversion of scanned marksheets into structured CSV to eliminate manual data entry" },
                 { title: "Extracts 20+ fields (student details, roll, subject-wise marks, totals) with validation and confidence scoring" },
                 { title: "Custom and robust utility functions for data extraction" },
             ],
