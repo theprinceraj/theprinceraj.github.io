@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "/",
+    "title": "Home",
+    "description": "Portfolio and projects by Prince Raj"
+  },
+  {
+    "slug": "/blogs",
+    "title": "Blogs",
+    "description": "List of blog articles"
+  },
+  {
+    "slug": "https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217",
+    "title": "How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?",
+    "description": "Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.",
+    "date": "2026-01-01"
+  },
+  {
+    "slug": "https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462",
+    "title": "NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API",
+    "description": "A practical, step-by-step guide to integrating Razorpay with a NestJS backend. This article explains some payment concepts you need to know (orders, payments, and security), shows how to configure Razorpay credentials, implements server-side payment creation and verification. Ideal for backend developers looking to add payment flows to their APIs without getting lost in the docs.",
+    "date": "2025-12-06"
+  },
+  {
+    "slug": "https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973",
+    "title": "How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters",
+    "description": "On popular social media platforms like Instagram, checking whether a username is available has to happen almost instantly, even when the system is handling millions or billions of accounts. Instead of searching linearly, Bloom Filters are used to quickly rule out usernames that definitely do not exist and narrow the search. This makes availability checks much faster and more efficient. Let's explore how this probabilistic data structure works!",
+    "date": "2025-08-30"
+  }
+]
