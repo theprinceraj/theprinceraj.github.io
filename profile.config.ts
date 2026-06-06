@@ -28,7 +28,7 @@ import FigmaIcon from "@/assets/icons/toolbox/figma.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
 import theLoudWardrobePage from "@/assets/images/the-loud-wardrobe-page.webp";
-import profileCardsGeneratorPage from "@/assets/images/profile-cards-generator-page.png";
+import sentinelPage from "@/assets/images/sentinel-landing-page.webp";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.webp";
 import rohanSinghAvatar from "@/assets/images/rohan-singh-avatar.webp";
@@ -241,11 +241,30 @@ const CONFIG = {
     ],
     portfolioProjects: [
         {
+            company: "Project Sentinel",
+            year: "2026",
+            title: "AI Governance Proxy",
+            results: [
+                {
+                    title: "Built a real-time AI governance proxy that intercepts and validates all requests between applications and LLM APIs before they reach the model",
+                },
+                {
+                    title: "Engineered a PII detection and redaction engine using Microsoft Presidio capable of identifying and masking 50+ sensitive data types including emails, credit card numbers and API keys",
+                },
+                {
+                    title: "Implemented a live governance logging system providing deep visibility into semantic intent, policy triggers, and emergent AI safety risks.",
+                },
+            ],
+            link: "https://sentinel.theprinceraj.tech",
+            image: sentinelPage,
+            linkText: "View Live Site",
+        },
+        {
             company: "The Loud Wardrobe",
             year: "2026",
-            title: "Fashion E-commerce Store",
+            title: "Fashion E-commerce Store (Freelance)",
             results: [
-                { title: "Engineered a scalable Shopify storefront for a fashion brand" },
+                { title: "Built a scalable Shopify storefront for a fashion brand" },
                 { title: "Integrated payment, shipping, and order fulfillment workflows" },
                 { title: "Configured analytics and conversion tracking infrastructure" },
             ],
@@ -286,26 +305,13 @@ const CONFIG = {
             year: "2024",
             title: "OCR-Based Marksheet Scanner",
             results: [
-                { title: "Automated marksheet to CSV conversion" },
-                { title: "Extracts 20+ fields of data" },
-                { title: "Custom utility functions for data extraction" },
+                { title: "Automated batch conversion of scanned marksheets into structured CSV to eliminate manual data entry" },
+                { title: "Extracts 20+ fields (student details, roll, subject-wise marks, totals) with validation and confidence scoring" },
+                { title: "Custom and robust utility functions for data extraction" },
             ],
             link: "https://github.com/theprinceraj/Markshify",
             image: markshifyLandingPage,
             linkText: "View Code",
-        },
-        {
-            company: "Profile Cards API",
-            year: "2023",
-            title: "Dynamic Profile Cards",
-            results: [
-                { title: "Sharable and personalized profile cards" },
-                { title: "With debouncing and field validation" },
-                { title: "99.95% uptime leveraging Vercel" },
-            ],
-            link: "https://prince.is-a.dev/Profile-Cards-API/",
-            image: profileCardsGeneratorPage,
-            linkText: "View Live Site",
         },
     ],
     testimonials: [

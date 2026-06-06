@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
+        "postbuild": "node scripts/generate-seo.js",
         "start": "next start",
         "lint": "next lint"
     },
@@ -17,7 +18,6 @@
         "next": "^16.2.6",
         "react": "^18",
         "react-dom": "^18",
-        "sharp": "^0.34.5",
         "tailwind-merge": "^2.4.0"
     },
     "devDependencies": {

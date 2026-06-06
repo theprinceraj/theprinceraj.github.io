@@ -19,10 +19,10 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                             key={project.title}
                             className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16 sticky"
                             style={{
-                                top: `calc(${64 + index * 40}px)`,
+                                top: `calc(${64 + index * 24}px)`,
                             }}>
                             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                                <div className="lg:pb-8">
+                                <div className="lg:pb-8 min-h-[63vh] max-h-[63vh] md:min-h-[65vh] md:max-h-[65vh] lg:min-h-[75vh] lg:max-h-[75vh]">
                                     <div className="inline-flex gap-2 uppercase font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text tracking-widest md:tracking-normal text-sm md:text-base">
                                         <span>{project.company}</span>
                                         <span>&bull;</span>
