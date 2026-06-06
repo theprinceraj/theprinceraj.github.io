@@ -26,3 +26,5 @@ export default function Home() {
         </>
     );
 }
+
+// Home page is a Client Component; keep site-level metadata in layout.tsx
