@@ -48,6 +48,11 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
+    verification: {
+        other: {
+            "monetag": "12d796ea721ddf665211124f3bdc6c4e",
+        },
+    },
 };
 
 export default function RootLayout({
@@ -71,15 +76,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={twMerge(
-                    inter.variable,
-                    calistoga.variable,
-                    "bg-gray-900 text-white font-sans antialiased"
-                )}>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-                />
+                className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white font-sans antialiased")}>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
                 {children}
             </body>
         </html>
