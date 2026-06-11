@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
@@ -48,11 +49,6 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
-    verification: {
-        other: {
-            "monetag": "12d796ea721ddf665211124f3bdc6c4e",
-        },
-    },
 };
 
 export default function RootLayout({
@@ -78,6 +74,14 @@ export default function RootLayout({
             <body
                 className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white font-sans antialiased")}>
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+                <Script
+                    id="google-gtag"
+                    src="https://www.googletagmanager.com/gtag/js?id=G-7M8S3FX4CC"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-7M8S3FX4CC');`}
+                </Script>
                 {children}
             </body>
         </html>
