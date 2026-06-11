@@ -3,6 +3,7 @@ const path = require("path");
 
 const CONFIG_PATH = path.join(__dirname, "..", "profile.config.ts");
 const PUBLIC_PATH = path.join(__dirname, "..", "public");
+const SITE_ORIGIN = "https://theprinceraj.tech";
 
 function loadBlogs() {
   const configContent = fs.readFileSync(CONFIG_PATH, "utf8");
@@ -17,11 +18,13 @@ function loadBlogs() {
 
 function generateSitemap(blogs) {
   const urls = [
-    { loc: "https://theprinceraj.tech/", changefreq: "daily", priority: 1.0 },
-    { loc: "https://theprinceraj.tech/blogs", changefreq: "weekly", priority: 0.8 },
+    { loc: `${SITE_ORIGIN}/`, changefreq: "daily", priority: 1.0 },
+    { loc: `${SITE_ORIGIN}/blogs`, changefreq: "weekly", priority: 0.8 },
   ];
   for (const b of blogs) {
-    urls.push({ loc: b.link, changefreq: "monthly", priority: 0.6 });
+    if (b.link.startsWith(SITE_ORIGIN)) {
+      urls.push({ loc: b.link, changefreq: "monthly", priority: 0.6 });
+    }
   }
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
     .map((u) => `  <url>\n    <loc>${u.loc}</loc>\n    <changefreq>${u.changefreq}</changefreq>\n    <priority>${u.priority}</priority>\n  </url>`)
