@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
-        "postbuild": "node scripts/generate-seo.js",
+        "postbuild": "bun scripts/generate-seo.ts",
         "start": "next start",
         "lint": "next lint"
     },

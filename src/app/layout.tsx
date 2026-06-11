@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     },
     icons: {
         icon: "/favicon.ico",
-        apple: "/images/flowchart-local-social.png",
+        apple: "/favicon.ico",
     },
     robots: {
         index: true,

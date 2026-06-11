@@ -1,0 +1,85 @@
+# Prince Raj
+
+## About
+Portfolio and engineering blog for Prince Raj.
+
+## Pages
+- [Home](https://theprinceraj.tech/)
+- [Blogs](https://theprinceraj.tech/blogs)
+
+## Projects
+- AI Governance Proxy
+  - Company: Project Sentinel
+  - Year: 2026
+  - Link: https://sentinel.theprinceraj.tech
+  - Highlights: Built a low-latency AI governance proxy to intercept and validate all application-to-LLM API requests; Integrated Microsoft Presidio to automatically detect and redact 50+ PII and sensitive data types; Designed a live governance log providing real-time visibility into semantic intent and safety risks
+
+- Fashion E-commerce Store (Freelance)
+  - Company: The Loud Wardrobe
+  - Year: 2026
+  - Link: https://theloudwardrobe.com
+  - Highlights: Built a scalable Shopify storefront for a fashion brand; Integrated payment, shipping, and order fulfillment workflows; Configured analytics and conversion tracking infrastructure
+
+- AI-Powered Cover Letter Assistant
+  - Company: Cover Genius
+  - Year: 2025
+  - Link: https://cv.theprinceraj.tech
+  - Highlights: Built an AI-driven system to generate tailored cover letters with resume PDF analysis in seconds; Implemented secure authentication with email verification and guest modes; Developed credit-based generation system with Razorpay and PayPal support
+
+- Scalable Backend for Social Media Platform
+  - Company: Local Social
+  - Year: 2025
+  - Link: /images/flowchart-local-social.png
+  - Highlights: Engineered a modular NestJS backend powering 30+ production-grade APIs; Built social features including authentication, feeds, profiles, and hashtags; Designed the complete database architecture with geospatial querying for location-aware content discovery
+
+- OCR-Based Marksheet Scanner
+  - Company: Markshify
+  - Year: 2024
+  - Link: https://github.com/theprinceraj/Markshify
+  - Highlights: Automated conversion of scanned marksheets into structured CSV to eliminate manual data entry; Extracts 20+ fields (student details, roll, subject-wise marks, totals) with validation and confidence scoring; Custom and robust utility functions for data extraction
+
+## Blogs
+- How I Discovered and Helped Fix a Security Flaw in a Government Portal?
+  - Date: 12 Jun '26
+  - Niche: Cybersecurity
+  - Link: https://medium.com/@theprinceraj/discovering-a-security-flaw-in-a-government-portal-used-by-3-lakh-students-ad3bf67a0513
+  - Summary: While using a government portal serving over 3 lakh students and beneficiaries, I discovered a Broken Access Control vulnerability that could expose sensitive information to unauthorized users. This article documents the complete journey—from discovery and validation to responsible disclosure with CERT-In and eventual remediation.
+
+- How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?
+  - Date: 1 Jan '26
+  - Niche: Backend Auth
+  - Link: https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217
+  - Summary: Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.
+
+- NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API
+  - Date: 6 Dec '25
+  - Niche: Payment Setup
+  - Link: https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462
+  - Summary: A practical, step-by-step guide to integrating Razorpay with a NestJS backend. This article explains some payment concepts you need to know (orders, payments, and security), shows how to configure Razorpay credentials, implements server-side payment creation and verification. Ideal for backend developers looking to add payment flows to their APIs without getting lost in the docs.
+
+- How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters
+  - Date: 30 Aug '25
+  - Niche: Data Structures
+  - Link: https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973
+  - Summary: On popular social media platforms like Instagram, checking whether a username is available has to happen almost instantly, even when the system is handling millions or billions of accounts. Instead of searching linearly, Bloom Filters are used to quickly rule out usernames that definitely do not exist and narrow the search. This makes availability checks much faster and more efficient. Let's explore how this probabilistic data structure works!
+
+## Reviews
+- Shanzil
+  - Role: Marketing Head @ TotalEdge
+  - Review: Prince has been one of the best backend developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club
+
+- Savan
+  - Role: Owner @ Grown Up Marketing
+  - Review: I just wanted to take a moment to say a big thank you for creating my marketing agency's website. It’s live now and I absolutely love your work — it's even better than I imagined! I really appreciate the effort and creativity you put into it. From now on, whatever projects I get through my agency, I would love to work with you. Looking forward to doing some amazing work together!
+
+- Rohan Singh
+  - Role: Founder @ MindMates.in
+  - Review: Prince is an exceptionally skilled and dependable backend developer. He tackles complex systems with ease and always delivers clean, scalable solutions. Beyond his technical strengths, he consistently supports the team and steps in whenever needed, making him a truly reliable and collaborative teammate. I’d highly recommend working with him.
+
+- Ayush Yadav
+  - Role: Prince's College Friend
+  - Review: Prince is someone who always stands out for his problem solving skills and creativity. He takes on challenges with a lot of determination. More than that, he is a supportive friend and a great teammate to work with.
+
+- Deepak Kumar
+  - Role: Prince's College Friend
+  - Review: It's rare to come across someone like Prince , a developer who not only writes exceptional code but also brings humility, patience, and genuine passion into every project.
