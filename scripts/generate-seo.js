@@ -1,11 +1,18 @@
 const fs = require("fs");
 const path = require("path");
 
-const BLOGS_PATH = path.join(__dirname, "..", "src", "data", "blogs.json");
+const CONFIG_PATH = path.join(__dirname, "..", "profile.config.ts");
 const PUBLIC_PATH = path.join(__dirname, "..", "public");
 
 function loadBlogs() {
-  return JSON.parse(fs.readFileSync(BLOGS_PATH, "utf8"));
+  const configContent = fs.readFileSync(CONFIG_PATH, "utf8");
+  const blogsMatch = configContent.match(/blogs: (\[[\s\S]*?\]),/);
+  if (!blogsMatch) throw new Error("Could not parse blogs from profile.config.ts");
+  try {
+    return eval(`(${blogsMatch[1]})`);
+  } catch (e) {
+    throw new Error(`Failed to parse blogs: ${e.message}`);
+  }
 }
 
 function generateSitemap(blogs) {

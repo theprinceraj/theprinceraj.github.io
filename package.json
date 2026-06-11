@@ -11,8 +11,8 @@
     },
     "dependencies": {
         "@svgr/webpack": "^8.1.0",
-        "baseline-browser-mapping": "^2.10.29",
-        "caniuse-lite": "^1.0.30001792",
+        "baseline-browser-mapping": "^2.10.36",
+        "caniuse-lite": "^1.0.30001799",
         "framer-motion": "^11.3.21",
         "lucide-react": "^1.14.0",
         "next": "^16.2.6",

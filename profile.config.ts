@@ -40,6 +40,14 @@ const CONFIG = {
     email: "profile.princeraj@gmail.com",
     blogs: [
         {
+            title: "How I Discovered and Helped Fix a Security Flaw in a Government Portal?",
+            description:
+                "While using a government portal serving over 3 lakh students and beneficiaries, I discovered a Broken Access Control vulnerability that could expose sensitive information to unauthorized users. This article documents the complete journey—from discovery and validation to responsible disclosure with CERT-In and eventual remediation.",
+            date: "12 Jun '26",
+            link: "https://medium.com/@theprinceraj/discovering-a-security-flaw-in-a-government-portal-used-by-3-lakh-students-ad3bf67a0513",
+            niche: "Cybersecurity",
+        },
+        {
             title: "How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?",
             description:
                 "Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.",

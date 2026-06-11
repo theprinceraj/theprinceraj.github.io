@@ -2,7 +2,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Footer } from "@/sections/Footer";
 import { ContactSection } from "@/sections/Contact";
 import { BlogContainer } from "@/sections/blogs/BlogContainer";
-import blogs from "@/data/blogs.json";
+import { blogs } from "@/../profile.config";
 import { Metadata } from "next";
 export default function Page() {
     return (
