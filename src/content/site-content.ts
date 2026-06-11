@@ -78,6 +78,10 @@ export const footerLinks: FooterLinkItem[] = [
         title: "LinkedIn",
         href: "https://www.linkedin.com/in/theprinceraj",
     },
+    {
+        title: "Sponsor Me ❤️",
+        href: "https://razorpay.me/@theprinceraj",
+    },
 ];
 
 export const portfolioProjects: PortfolioProjectItem[] = [
