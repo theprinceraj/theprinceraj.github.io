@@ -1,4 +1,4 @@
-export const siteOrigin = "https://theprinceraj.tech";
+export const siteOrigin = "https://theprinceraj.in";
 
 export type BlogItem = {
     title: string;
@@ -94,7 +94,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
             "Integrated Microsoft Presidio to automatically detect and redact 50+ PII and sensitive data types",
             "Designed a live governance log providing real-time visibility into semantic intent and safety risks",
         ],
-        link: "https://sentinel.theprinceraj.tech",
+        link: "https://sentinel.theprinceraj.in",
         linkText: "View Live Site",
     },
     {
@@ -118,7 +118,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
             "Implemented secure authentication with email verification and guest modes",
             "Developed credit-based generation system with Razorpay and PayPal support",
         ],
-        link: "https://cv.theprinceraj.tech",
+        link: "https://cv.theprinceraj.in",
         linkText: "View Live Site",
     },
     {

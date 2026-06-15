@@ -4,14 +4,14 @@
 Portfolio and engineering blog for Prince Raj.
 
 ## Pages
-- [Home](https://theprinceraj.tech/)
-- [Blogs](https://theprinceraj.tech/blogs)
+- [Home](https://theprinceraj.in/)
+- [Blogs](https://theprinceraj.in/blogs)
 
 ## Projects
 - AI Governance Proxy
   - Company: Project Sentinel
   - Year: 2026
-  - Link: https://sentinel.theprinceraj.tech
+  - Link: https://sentinel.theprinceraj.in
   - Highlights: Built a low-latency AI governance proxy to intercept and validate all application-to-LLM API requests; Integrated Microsoft Presidio to automatically detect and redact 50+ PII and sensitive data types; Designed a live governance log providing real-time visibility into semantic intent and safety risks
 
 - Fashion E-commerce Store (Freelance)
@@ -23,7 +23,7 @@ Portfolio and engineering blog for Prince Raj.
 - AI-Powered Cover Letter Assistant
   - Company: Cover Genius
   - Year: 2025
-  - Link: https://cv.theprinceraj.tech
+  - Link: https://cv.theprinceraj.in
   - Highlights: Built an AI-driven system to generate tailored cover letters with resume PDF analysis in seconds; Implemented secure authentication with email verification and guest modes; Developed credit-based generation system with Razorpay and PayPal support
 
 - Scalable Backend for Social Media Platform
