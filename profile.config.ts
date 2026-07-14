@@ -27,7 +27,7 @@ import AzureIcon from "@/assets/icons/toolbox/azure.svg";
 import FigmaIcon from "@/assets/icons/toolbox/figma.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
-import theLoudWardrobePage from "@/assets/images/the-loud-wardrobe-page.webp";
+import gstRecoProPage from "@/assets/images/gst-reco-pro-page.webp";
 import sentinelPage from "@/assets/images/sentinel-landing-page.webp";
 import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import ayushYadavAvatar from "@/assets/images/ayush-yadav-avatar.webp";
@@ -44,8 +44,8 @@ import {
 } from "./src/content/site-content";
 
 const portfolioProjectImages = [
+    gstRecoProPage,
     sentinelPage,
-    theLoudWardrobePage,
     coverGeniusPage,
     localSocialPostmanPage,
     markshifyLandingPage,

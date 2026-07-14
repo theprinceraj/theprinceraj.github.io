@@ -136,13 +136,13 @@ export const Header = ({
                     const renderIcon = (id: string) => {
                         switch (id) {
                             case heroSectionId:
-                                return <HomeIcon className="size-5 sm:hidden md:block" />;
+                                return <HomeIcon className="size-5 block" />;
                             case projectsSectionId:
-                                return <BriefcaseIcon className="size-5 sm:hidden md:block" />;
+                                return <BriefcaseIcon className="size-5 block" />;
                             case testimonialsSectionId:
-                                return <FeedbackReviewIcon className="size-5 sm:hidden md:block" />;
+                                return <FeedbackReviewIcon className="size-5 block" />;
                             case aboutSectionId:
-                                return <IdBadgeIcon className="size-5 sm:hidden md:block" />;
+                                return <IdBadgeIcon className="size-5 block" />;
                             default:
                                 return null;
                         }
@@ -161,7 +161,7 @@ export const Header = ({
                             )}>
                             {renderIcon(sectionId)}
                             <span className="sr-only">{labels[sectionId as keyof typeof labels]}</span>
-                            <span className="hidden sm:inline ml-1">{labels[sectionId as keyof typeof labels]}</span>
+                            <span className="hidden md:inline ml-1">{labels[sectionId as keyof typeof labels]}</span>
                         </a>
                     );
                 })}

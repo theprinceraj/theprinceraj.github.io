@@ -86,6 +86,18 @@ export const footerLinks: FooterLinkItem[] = [
 
 export const portfolioProjects: PortfolioProjectItem[] = [
     {
+        "company": "GST Reco Pro",
+        "year": "2026",
+        "title": "Tax Compliance & Reconciliation SaaS",
+        "results": [
+            "Collaborated with a domain expert to build a production-ready bulk tax document processing platform.",
+            "Architected a secure admin dashboard with advanced reporting and client-side data privacy.",
+            "Built an end-to-end solution with Supabase, Razorpay, React, and TailwindCSS.",
+        ],
+        "link": "https://www.youtube.com/watch?v=MR8hMd3QWLo",
+        "linkText": "View Launch Video",
+    },
+    {
         company: "Project Sentinel",
         year: "2026",
         title: "AI Governance Proxy",
@@ -95,18 +107,6 @@ export const portfolioProjects: PortfolioProjectItem[] = [
             "Designed a live governance log providing real-time visibility into semantic intent and safety risks",
         ],
         link: "https://sentinel.theprinceraj.in",
-        linkText: "View Live Site",
-    },
-    {
-        company: "The Loud Wardrobe",
-        year: "2026",
-        title: "Fashion E-commerce Store (Freelance)",
-        results: [
-            "Built a scalable Shopify storefront for a fashion brand",
-            "Integrated payment, shipping, and order fulfillment workflows",
-            "Configured analytics and conversion tracking infrastructure",
-        ],
-        link: "https://theloudwardrobe.com",
         linkText: "View Live Site",
     },
     {

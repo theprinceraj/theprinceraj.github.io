@@ -21,14 +21,15 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                             style={{
                                 top: `calc(${64 + index * 14}px)`,
                             }}>
-                            <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                                <div className="lg:pb-8 sm:min-h-[67vh] sm:max-h-[67vh] lg:min-h-[75vh] lg:max-h-[75vh]">
-                                    <div className="inline-flex gap-2 uppercase font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text tracking-widest md:tracking-normal text-sm md:text-base">
+                            <div className="grid lg:grid-cols-2 lg:gap-16">
+                                <div className="lg:pb-8 ">
+                                    {/* Company and Year */}
+                                    <div className="inline-flex gap-2 uppercase font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text tracking-widest md:tracking-normal text-xs sm:text-sm md:text-base">
                                         <span>{project.company}</span>
                                         <span>&bull;</span>
                                         <span>{project.year}</span>
                                     </div>
-                                    <h3 className="font-serif text-2xl md:text-4xl lg:max-w-sm mt-2 md:mt-5">
+                                    <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl lg:max-w-sm mt-2 md:mt-5">
                                         {project.title}
                                     </h3>
                                     <hr className="border-t-2 border-white/10 mt-4 md:mt-5" />
@@ -36,9 +37,9 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                         {project.results.map((result) => (
                                             <li
                                                 key={result.title}
-                                                className="inline-flex gap-2 text-white/50 font-light text-sm md:text-base">
-                                                <CheckCircle2Icon className="size-5 md:size-6" />
-                                                <span>{result.title}</span>
+                                                className="inline-flex items-center gap-2 text-white/50 font-light">
+                                                <CheckCircle2Icon className="size-8 md:size-5" />
+                                                <span className="text-xs md:text-sm lg:text-base">{result.title}</span>
                                             </li>
                                         ))}
                                     </ul>
