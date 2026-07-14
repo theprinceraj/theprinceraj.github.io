@@ -6,6 +6,7 @@ import ReadingGif from "@/assets/animated/reading.webp";
 import ReadingStatic from "@/assets/images/reading.webp";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function BlogHomepagePopup() {
     const [imageSrc, setImageSrc] = useState(ReadingStatic);
@@ -24,7 +25,7 @@ export default function BlogHomepagePopup() {
                 visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-50 pointer-events-none"
             }`}
             aria-hidden={!visible}>
-            <a href="/blogs" target="_blank" className="size-full flex items-center justify-center gap-y-2 flex-col">
+            <Link href="/blogs" className="size-full flex items-center justify-center gap-y-2 flex-col">
                 <Image
                     src={imageSrc}
                     alt="Reading"
@@ -35,7 +36,7 @@ export default function BlogHomepagePopup() {
                 <div className="text-lg md:text-2xl font-bold px-3 py-1 flex items-center justify-center gap-x-1 border-white/30 rounded-full bg-white/10 backdrop-blur-3xl">
                     <span>Blogs</span> <ArrowUpRightIcon />
                 </div>
-            </a>
+            </Link>
         </div>
     );
 }
