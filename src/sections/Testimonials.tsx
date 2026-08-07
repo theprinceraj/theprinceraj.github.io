@@ -4,6 +4,7 @@ import { Card } from "@/components/Card";
 import { Fragment } from "react";
 import { testimonials } from "../../profile.config";
 import { testimonialsSectionId } from "./constants";
+import { ExternalLinkIcon, UserIcon } from "lucide-react";
 export const TestimonialsSection = () => {
     return (
         <div className="py-16 lg:py-24">
@@ -25,22 +26,37 @@ export const TestimonialsSection = () => {
                                     <Card
                                         key={testimonial.name}
                                         className="max-w-xs md:max-w-md md:p-8 hover:-rotate-3 transition duration-300">
-                                        <div className="flex items-center gap-4">
+                                        <a
+                                            href={testimonial.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-4">
                                             <div className="inline-flex items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0 overflow-hidden">
-                                                <Image
-                                                    src={testimonial.avatar}
-                                                    alt={testimonial.name}
-                                                    className="max-h-full"
-                                                    unoptimized
-                                                    loading="lazy"
-                                                />
+                                                {testimonial.avatar ? (
+                                                    <Image
+                                                        src={testimonial.avatar}
+                                                        alt={testimonial.name}
+                                                        className="max-h-full"
+                                                        unoptimized
+                                                        loading="lazy"
+                                                    />
+                                                ) : (
+                                                    <div className="flex items-center justify-center size-14 bg-gray-700 rounded-full">
+                                                        <UserIcon className="size-6 text-white" />
+                                                    </div>
+                                                )}
                                             </div>
                                             <div>
                                                 <div className="font-semibold">{testimonial.name}</div>
                                                 <div className="text-sm text-white/40">{testimonial.position}</div>
                                             </div>
-                                        </div>
-                                        <p className="text-sm md:text-base mt-4 md:my-6">{testimonial.text}</p>
+                                            {testimonial.href && (
+                                                <ExternalLinkIcon className="size-4 text-white/40 ml-auto" />
+                                            )}
+                                        </a>
+                                        <p className="text-sm md:text-base mt-4 md:my-6">
+                                            {testimonial.text.substring(0, 250)}...
+                                        </p>
                                     </Card>
                                 ))}
                             </Fragment>

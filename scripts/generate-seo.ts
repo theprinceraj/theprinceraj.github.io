@@ -1,12 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import {
-    blogs,
-    portfolioProjects,
-    testimonials,
-    siteOrigin,
-} from "../src/content/site-content";
+import { blogs, portfolioProjects, testimonials, siteOrigin } from "../src/content/site-content";
+import { seo } from "../profile.config";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.join(SCRIPT_DIR, "..");
@@ -36,16 +32,19 @@ function generateSitemap() {
     const urls = [
         { loc: `${siteOrigin}/`, changefreq: "daily", priority: 1 },
         { loc: `${siteOrigin}/blogs`, changefreq: "weekly", priority: 0.8 },
-        ...blogs.filter((blog) => blog.link.startsWith(siteOrigin)).map((blog) => ({
-            loc: blog.link,
-            changefreq: "monthly",
-            priority: 0.6,
-        })),
+        ...blogs
+            .filter((blog) => blog.link.startsWith(siteOrigin))
+            .map((blog) => ({
+                loc: blog.link,
+                changefreq: "monthly",
+                priority: 0.6,
+            })),
     ];
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
         .map(
-            (url) => `  <url>\n    <loc>${url.loc}</loc>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`
+            (url) =>
+                `  <url>\n    <loc>${url.loc}</loc>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`,
         )
         .join("\n")}\n</urlset>`;
 
@@ -56,7 +55,8 @@ function generateSitemap() {
 function generateRss() {
     const items = blogs
         .map(
-            (blog) => `  <item>\n    <title>${escapeXml(blog.title)}</title>\n    <link>${blog.link}</link>\n    <description>${escapeXml(blog.description)}</description>\n    <pubDate>${new Date(blog.date).toUTCString()}</pubDate>\n  </item>`
+            (blog) =>
+                `  <item>\n    <title>${escapeXml(blog.title)}</title>\n    <link>${blog.link}</link>\n    <description>${escapeXml(blog.description)}</description>\n    <pubDate>${new Date(blog.date).toUTCString()}</pubDate>\n  </item>`,
         )
         .join("\n");
 
@@ -73,7 +73,7 @@ function generateLlmstxt() {
         "# Prince Raj",
         "",
         "## About",
-        "Portfolio and engineering blog for Prince Raj.",
+        seo.about,
         "",
         "## Pages",
         `- [Home](${siteOrigin}/)`,
@@ -104,6 +104,9 @@ function generateLlmstxt() {
             `  - Review: ${testimonial.text}`,
             "",
         ]),
+        "## Keywords",
+        "",
+        seo.keywords.join(", "),
     ].join("\n");
 
     writeFileSync(path.join(WELL_KNOWN_DIR, "llms.txt"), content, "utf8");
