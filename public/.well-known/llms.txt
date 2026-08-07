@@ -1,7 +1,6 @@
 # Prince Raj
 
-## About
-Prince Raj is a full-stack developer and computer science undergraduate building production-grade web applications, backend systems, and SaaS products. His work focuses on backend engineering, full-stack development, API design, authentication systems, payment integrations, database architecture, document automation, and AI-related infrastructure.
+> Prince Raj is a full-stack developer and computer science undergraduate building production-grade web applications, backend systems, and SaaS products. His work focuses on backend engineering, full-stack development, API design, authentication systems, payment integrations, database architecture, document automation, and AI-related infrastructure.
         
         He is the creator of GST Reco Pro, a tax compliance and reconciliation SaaS built for Indian tax professionals. The platform processes bulk GST documents, converts tax PDFs into structured Excel reports, and is designed with a strong privacy-first approach where sensitive client data stays on the user’s device. The product uses Tanstack Start, Tailwind CSS, Supabase, and Razorpay and reflects his interest in shipping practical, real-world software that solves business problems. The product has over 60+ users as of 08/08/2026.
         
@@ -21,6 +20,16 @@ Prince Raj is a full-stack developer and computer science undergraduate building
 ## Pages
 - [Home](https://theprinceraj.in/)
 - [Blogs](https://theprinceraj.in/blogs)
+
+## Expertise
+- SaaS product development and deployment
+- Backend systems (NestJS, Node.js, Express)
+- API design and authentication (JWT, OAuth, access/refresh tokens)
+- Payment integration (Razorpay, PayPal)
+- Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)
+- AI governance and PII detection/redaction
+- Document automation (PDF to Excel, OCR)
+- Cloud deployment (AWS, Azure, Cloudflare, Vercel)
 
 ## Projects
 - Tax Compliance & Reconciliation SaaS
@@ -102,6 +111,13 @@ Prince Raj is a full-stack developer and computer science undergraduate building
 - Deepak Kumar
   - Role: Prince's College Friend
   - Review: It's rare to come across someone like Prince , a developer who not only writes exceptional code but also brings humility, patience, and genuine passion into every project.
+
+## Contact
+- Email: profile.princeraj@gmail.com
+- Twitter: https://x.com/theprinceraj
+- Github: https://github.com/theprinceraj
+- LinkedIn: https://www.linkedin.com/in/theprinceraj
+- Sponsor Me ❤️: https://razorpay.me/@theprinceraj
 
 ## Keywords
 

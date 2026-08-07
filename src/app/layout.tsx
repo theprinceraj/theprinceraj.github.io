@@ -9,12 +9,14 @@ const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-serif", weig
 
 export const metadata: Metadata = {
     title: { default: "Prince Raj", template: "%s | Prince Raj" },
-    description: "An engineering undergrad who likes making end-to-end web experiences",
+    description:
+        "Prince Raj — full-stack developer building SaaS products, backend systems, and AI infrastructure. Creator of GST Reco Pro (tax compliance SaaS) and Project Sentinel (AI governance proxy). Writes about authentication, payments, and data structures.",
     metadataBase: new URL("https://theprinceraj.in"),
     alternates: { canonical: "/" },
     openGraph: {
         title: "Prince Raj",
-        description: "An engineering undergrad who likes making end-to-end web experiences",
+        description:
+            "Prince Raj — full-stack developer building SaaS products, backend systems, and AI infrastructure. Creator of GST Reco Pro (tax compliance SaaS) and Project Sentinel (AI governance proxy).",
         url: "https://theprinceraj.in",
         siteName: "Prince Raj",
         images: [
@@ -31,7 +33,8 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Prince Raj",
-        description: "An engineering undergrad who likes making end-to-end web experiences",
+        description:
+            "Prince Raj — full-stack developer building SaaS products, backend systems, and AI infrastructure. Creator of GST Reco Pro and Project Sentinel.",
         images: ["/images/hero-screenshot.png"],
     },
     icons: {
@@ -59,21 +62,71 @@ export default function RootLayout({
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://theprinceraj.in#person",
         name: "Prince Raj",
         url: "https://theprinceraj.in",
         sameAs: [
             "https://x.com/theprinceraj",
             "https://github.com/theprinceraj",
             "https://www.linkedin.com/in/theprinceraj",
+            "https://medium.com/@theprinceraj",
         ],
-        jobTitle: "Software Engineer",
+        identifier: "@theprinceraj",
+        jobTitle: "Full-Stack Developer & SaaS Builder",
         email: "profile.princeraj@gmail.com",
+        logo: "https://theprinceraj.in/images/hero-screenshot.png",
+        knowsAbout: [
+            "Backend Engineering",
+            "NestJS",
+            "Node.js",
+            "TypeScript",
+            "API Design",
+            "Authentication Systems",
+            "Payment Integration",
+            "Razorpay",
+            "SaaS Products",
+            "Database Architecture",
+            "AI Governance",
+            "Document Automation",
+            "OCR",
+            "PostgreSQL",
+            "MongoDB",
+            "Supabase",
+            "Prisma",
+            "Cloud Deployment",
+        ],
+        worksFor: {
+            "@type": "Organization",
+            name: "GST Reco Pro",
+            url: "https://gstrecopro.com",
+        },
+    } as const;
+
+    const websiteLd = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://theprinceraj.in#website",
+        url: "https://theprinceraj.in",
+        name: "Prince Raj — Portfolio",
+        description:
+            "Prince Raj is a full-stack developer and SaaS builder. Portfolio, projects, and engineering blog.",
+        author: { "@id": "https://theprinceraj.in#person" },
+        inLanguage: "en-US",
+        potentialAction: {
+            "@type": "SearchAction",
+            target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://theprinceraj.in/search?q={search_term_string}",
+            },
+            "query-input": "required name=search_term_string",
+        },
     } as const;
     return (
         <html lang="en">
             <body
                 className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white font-sans antialiased")}>
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
                 <Script
                     id="google-gtag"
                     src="https://www.googletagmanager.com/gtag/js?id=G-7M8S3FX4CC"

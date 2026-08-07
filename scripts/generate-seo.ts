@@ -1,8 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { blogs, portfolioProjects, testimonials, siteOrigin } from "../src/content/site-content";
-import { seo } from "../profile.config";
+import { blogs, portfolioProjects, testimonials, siteOrigin, footerLinks } from "../src/content/site-content";
+import { seo, email } from "../profile.config";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.join(SCRIPT_DIR, "..");
@@ -32,6 +32,7 @@ function generateSitemap() {
     const urls = [
         { loc: `${siteOrigin}/`, changefreq: "daily", priority: 1 },
         { loc: `${siteOrigin}/blogs`, changefreq: "weekly", priority: 0.8 },
+        { loc: `${siteOrigin}/llms.txt`, changefreq: "weekly", priority: 0.8 },
         ...blogs
             .filter((blog) => blog.link.startsWith(siteOrigin))
             .map((blog) => ({
@@ -66,18 +67,34 @@ function generateRss() {
     console.log("Wrote public/rss.xml");
 }
 
+function generateSummary(): string {
+    return seo.about.split("\n\n")[0].trim();
+}
+
 function generateLlmstxt() {
     mkdirSync(WELL_KNOWN_DIR, { recursive: true });
 
+    const summary = generateSummary();
+    const contactLines = footerLinks.map((link) => `- ${link.title}: ${link.href}`);
+
     const content = [
-        "# Prince Raj",
+        `# Prince Raj`,
         "",
-        "## About",
-        seo.about,
+        `> ${summary}`,
         "",
         "## Pages",
         `- [Home](${siteOrigin}/)`,
         `- [Blogs](${siteOrigin}/blogs)`,
+        "",
+        "## Expertise",
+        "- SaaS product development and deployment",
+        "- Backend systems (NestJS, Node.js, Express)",
+        "- API design and authentication (JWT, OAuth, access/refresh tokens)",
+        "- Payment integration (Razorpay, PayPal)",
+        "- Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)",
+        "- AI governance and PII detection/redaction",
+        "- Document automation (PDF to Excel, OCR)",
+        "- Cloud deployment (AWS, Azure, Cloudflare, Vercel)",
         "",
         "## Projects",
         ...portfolioProjects.flatMap((project) => [
@@ -104,19 +121,93 @@ function generateLlmstxt() {
             `  - Review: ${testimonial.text}`,
             "",
         ]),
+        "## Contact",
+        `- Email: ${email}`,
+        ...contactLines,
+        "",
         "## Keywords",
         "",
         seo.keywords.join(", "),
     ].join("\n");
 
+    writeFileSync(path.join(PUBLIC_DIR, "llms.txt"), content, "utf8");
+    console.log("Wrote public/llms.txt");
+
     writeFileSync(path.join(WELL_KNOWN_DIR, "llms.txt"), content, "utf8");
     console.log("Wrote public/.well-known/llms.txt");
+}
+
+function generateLlmsFullTxt() {
+    mkdirSync(WELL_KNOWN_DIR, { recursive: true });
+
+    const contactLines = footerLinks.map((link) => `- ${link.title}: ${link.href}`);
+
+    const content = [
+        "# Prince Raj - Full Profile",
+        "",
+        "## About",
+        seo.about,
+        "",
+        "## Pages",
+        `- Home: ${siteOrigin}/`,
+        `- Blogs: ${siteOrigin}/blogs`,
+        "",
+        "## Expertise",
+        "- SaaS product development and deployment",
+        "- Backend systems (NestJS, Node.js, Express)",
+        "- API design and authentication (JWT, OAuth, access/refresh tokens)",
+        "- Payment integration (Razorpay, PayPal)",
+        "- Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)",
+        "- AI governance and PII detection/redaction",
+        "- Document automation (PDF to Excel, OCR)",
+        "- Cloud deployment (AWS, Azure, Cloudflare, Vercel)",
+        "",
+        "## Projects",
+        ...portfolioProjects.flatMap((project) => [
+            `- ${project.title}`,
+            `  - Company: ${project.company}`,
+            `  - Year: ${project.year}`,
+            `  - Link: ${project.link}`,
+            `  - Highlights: ${project.results.join("; ")}`,
+            "",
+        ]),
+        "## Full Blog Descriptions",
+        ...blogs.flatMap((blog) => [
+            `- ${blog.title}`,
+            `  - Date: ${blog.date}`,
+            `  - Niche: ${blog.niche}`,
+            `  - Link: ${blog.link}`,
+            `  - Summary: ${blog.description}`,
+            "",
+        ]),
+        "## Full Testimonials",
+        ...testimonials.flatMap((testimonial) => [
+            `- ${testimonial.name}`,
+            `  - Role: ${testimonial.position}`,
+            `  - Review: ${testimonial.text}`,
+            "",
+        ]),
+        "## Contact",
+        `- Email: ${email}`,
+        ...contactLines,
+        "",
+        "## Keywords",
+        "",
+        seo.keywords.join(", "),
+    ].join("\n");
+
+    writeFileSync(path.join(PUBLIC_DIR, "llms.full.txt"), content, "utf8");
+    console.log("Wrote public/llms.full.txt");
+
+    writeFileSync(path.join(WELL_KNOWN_DIR, "llms.full.txt"), content, "utf8");
+    console.log("Wrote public/.well-known/llms.full.txt");
 }
 
 function main() {
     generateSitemap();
     generateRss();
     generateLlmstxt();
+    generateLlmsFullTxt();
 }
 
 main();
