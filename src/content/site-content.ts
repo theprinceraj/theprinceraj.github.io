@@ -65,7 +65,10 @@ export const blogs: BlogItem[] = [
     },
 ];
 
-export const footerLinks: FooterLinkItem[] = [
+export const mediumProfile = "https://medium.com/@theprinceraj";
+
+// Profiles that identify Prince Raj; also used for the JSON-LD `sameAs` list
+export const socialProfiles: FooterLinkItem[] = [
     {
         title: "Twitter",
         href: "https://x.com/theprinceraj",
@@ -78,6 +81,10 @@ export const footerLinks: FooterLinkItem[] = [
         title: "LinkedIn",
         href: "https://www.linkedin.com/in/theprinceraj",
     },
+];
+
+export const footerLinks: FooterLinkItem[] = [
+    ...socialProfiles,
     {
         title: "Sponsor Me ❤️",
         href: "https://razorpay.me/@theprinceraj",

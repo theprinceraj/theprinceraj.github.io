@@ -44,5 +44,5 @@ export default function Page() {
 export const metadata: Metadata = {
     title: "Blogs",
     description: "Thoughts on web dev, design, and the tools I use to build better digital experiences.",
-    alternates: { canonical: "https://theprinceraj.in/blogs" },
+    alternates: { canonical: "/blogs" },
 };
