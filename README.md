@@ -10,92 +10,95 @@
 
 ## 🚀 Overview
 
-This is a modern, responsive portfolio website built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It serves as a personal homepage, project showcase, and contact point for <b>@theprinceraj</b>.
+This is the personal homepage, project showcase, blog index and contact point for <b>@theprinceraj</b>, built with **Next.js 16**, **React 18** and **Tailwind CSS**.
 
-- **Live Demo:** [prince.is-a.dev](https://prince.is-a.dev)
+- **Live site:** [theprinceraj.in](https://theprinceraj.in)
 
 ## ✨ Features
 
 - Responsive design for desktop, tablet, and mobile
-- Project and toolbox showcase
+- Featured projects, testimonials, toolbox and hobbies sections
+- Blog index linking to posts on Medium
 - Animated hero section (Framer Motion)
-- SVG icons and optimized images
-- Contact and About sections
-- Built with performance and accessibility in mind
+- SEO and AI-crawler files generated at build time: `sitemap.xml`, `robots.txt`, `rss.xml`, `llms.txt` and `llms.full.txt`
+- JSON-LD structured data for search engines
 
 ## 🛠️ Tech Stack
 
-- [Next.js 14](https://nextjs.org/)
+- [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
 - [React 18](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [SVGR](https://react-svgr.com/)
-- [Sharp](https://sharp.pixelplumbing.com/) (image optimization)
+- [SVGR](https://react-svgr.com/) for SVG icons
+- [Bun](https://bun.sh/) as the package manager
 
 ## 📁 Project Structure
 
 ```
-├── designs/           # Figma/PNG design references
-├── public/            # Static assets (images, PDFs, SVGs)
+├── .github/workflows/   # GitHub Pages deployment (static export)
+├── public/              # Static files served as-is (images, resume and patent PDFs)
 ├── src/
-│   ├── app/           # Next.js app directory (pages, layout, styles)
-│   ├── assets/        # SVG icons, images
-│   ├── components/    # Reusable React components
-│   └── sections/      # Page sections (About, Projects, etc.)
-├── tailwind.config.ts # Tailwind CSS config
-├── next.config.mjs    # Next.js config
-├── package.json       # Project metadata and scripts
-└── ...
+│   ├── app/             # Pages, layout, and the sitemap/robots/rss/llms routes
+│   ├── assets/          # SVG icons and images imported by components
+│   ├── components/      # Reusable React components
+│   ├── content/         # All site content (see below)
+│   ├── lib/             # Builders for rss.xml, llms.txt and llms.full.txt
+│   └── sections/        # Page sections (Hero, Projects, About, ...)
+├── tailwind.config.ts
+├── next.config.mjs
+└── package.json
 ```
+
+## 📝 Editing Content
+
+All text and data live in `src/content/`. Pages and the generated files read from there, so you edit each fact in one place.
+
+| File | What it holds |
+| --- | --- |
+| `site-content.ts` | Site origin, email, blogs, footer links, testimonials, SEO keywords |
+| `projects.ts` | Every project. Entries with `featured` appear as homepage cards; all of them appear in the llms files |
+| `about-content.ts` | Toolbox items and hobbies |
+| `llms-content.ts` | Profile text, expertise, patent, professional and freelance work used only by the llms files |
+
+`sitemap.xml`, `robots.txt`, `rss.xml`, `llms.txt` and `llms.full.txt` are built from this content on every build. Do not add copies of them to `public/`.
 
 ## 🧑‍💻 Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18+)
-- [pnpm](https://pnpm.io/) / [npm](https://www.npmjs.com/) / [yarn](https://yarnpkg.com/) or [bun](https://bun.sh/)
+- [Bun](https://bun.sh/) (or Node.js 20+ with npm)
 
 ### Installation
 
 ```bash
-# Clone the repository
 $ git clone https://github.com/theprinceraj/theprinceraj.github.io.git
 $ cd theprinceraj.github.io
-
-# Install dependencies (choose one)
-$ npm install
-# or
-$ pnpm install
-# or
 $ bun install
 ```
 
 ### Development
 
 ```bash
-# Start the local dev server
-$ npm run dev
+$ bun run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the site.
+Visit [http://localhost:4000](http://localhost:4000) to view the site.
 
 ### Build for Production
 
 ```bash
-$ npm run build
-$ npm start
+$ bun run build
+$ bun run start
 ```
 
-## 📝 Customization
+## 🚢 Deployment
 
-- Update content in `src/sections/` and `src/components/`.
-- Add or replace images in `public/images/`.
-- Edit styles in `src/app/globals.css` or Tailwind config.
+Every push to `main` runs `.github/workflows/nextjs.yml`, which builds a static export (`output: "export"`, added by `actions/configure-pages`) and publishes the `out/` folder to GitHub Pages. Every route must therefore be static: route handlers and metadata routes such as `sitemap.ts` need `export const dynamic = "force-static"`.
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
 
 ---
 

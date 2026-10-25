@@ -5,15 +5,14 @@ import {
     llmsIntro,
     llmsAbout,
     llmsExpertise,
-    llmsProducts,
-    llmsProjects,
+    llmsPatent,
     llmsProfessionalWork,
     llmsProfessionalStack,
     llmsFreelanceWork,
     llmsEarlierWork,
     llmsPractice,
-    type LlmsProject,
 } from "@/content/llms-content";
+import { projects, type Project } from "@/content/projects";
 
 function escapeXml(unsafe: string) {
     return unsafe.replace(/[<>&'"]/g, (character) => {
@@ -49,7 +48,7 @@ function linkLine(name: string, summary: string, url?: string) {
     return url ? `- [${name}](${url}): ${summary}` : `- ${name}: ${summary}`;
 }
 
-function projectSection(project: LlmsProject) {
+function projectSection(project: Project) {
     return [
         `### ${project.name} (${project.year})`,
         project.summary,
@@ -61,6 +60,9 @@ function projectSection(project: LlmsProject) {
         "",
     ];
 }
+
+const products = projects.filter((project) => project.kind === "product");
+const otherProjects = projects.filter((project) => project.kind === "project");
 
 const contactLines = [`- [Email](mailto:${email})`, ...footerLinks.map((link) => `- [${link.title}](${link.href})`)];
 
@@ -78,13 +80,16 @@ export function buildLlmsTxt() {
         `- [Full profile](${siteOrigin}/llms.full.txt): Long version of this file with project details, professional work and testimonials`,
         "",
         "## Products",
-        ...llmsProducts.map((project) => linkLine(project.name, project.summary, project.url ?? project.repo)),
+        ...products.map((project) => linkLine(project.name, project.summary, project.url ?? project.repo)),
         "",
         "## Projects",
-        ...llmsProjects.map((project) => linkLine(project.name, project.summary, project.url ?? project.repo)),
+        ...otherProjects.map((project) => linkLine(project.name, project.summary, project.url ?? project.repo)),
         "",
         "## Professional work",
         ...llmsProfessionalWork.map((work) => `- ${work.title}: ${work.summary}`),
+        "",
+        "## Patent",
+        linkLine(llmsPatent.title, llmsPatent.summary, llmsPatent.url),
         "",
         "## Writing",
         ...blogs.map((blog) => linkLine(blog.title, blog.description, blog.link)),
@@ -113,10 +118,10 @@ export function buildLlmsFullTxt() {
         "",
         "## Products",
         "",
-        ...llmsProducts.flatMap(projectSection),
+        ...products.flatMap(projectSection),
         "## Projects",
         "",
-        ...llmsProjects.flatMap(projectSection),
+        ...otherProjects.flatMap(projectSection),
         "## Professional work",
         "Client names and product specifics are confidential, so this section describes the type of work only.",
         "",
@@ -134,6 +139,13 @@ export function buildLlmsFullTxt() {
         "",
         "## Earlier work",
         ...llmsEarlierWork.map((item) => `- ${item}`),
+        "",
+        "## Patent",
+        `### ${llmsPatent.title}`,
+        llmsPatent.summary,
+        "",
+        `- Document: ${llmsPatent.url}`,
+        ...llmsPatent.details.map((detail) => `- ${detail}`),
         "",
         "## Data structures and algorithms",
         llmsPractice,

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import { portfolioProjects } from "@/content/site-content";
+import { featuredProjects } from "@/content/projects";
 import { ArrowUpRightIcon, CheckCircle2Icon } from "lucide-react";
 
 export const ProjectsSection = ({ id }: { id: string }) => {
@@ -14,7 +14,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                     paragraph="See how I transformed concepts into engaging digital experiences."
                 />
                 <div className="flex flex-col gap-20 mt-10 md:mt-20">
-                    {portfolioProjects.map((project, index) => (
+                    {featuredProjects.map((project, index) => (
                         <Card
                             key={project.title}
                             className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16 sticky"
@@ -25,7 +25,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                 <div className="lg:pb-8 ">
                                     {/* Company and Year */}
                                     <div className="inline-flex gap-2 uppercase font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text tracking-widest md:tracking-normal text-xs sm:text-sm md:text-base">
-                                        <span>{project.company}</span>
+                                        <span>{project.name}</span>
                                         <span>&bull;</span>
                                         <span>{project.year}</span>
                                     </div>

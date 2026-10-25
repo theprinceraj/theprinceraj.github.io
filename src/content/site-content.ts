@@ -3,11 +3,6 @@ import rohanSinghAvatar from "@/assets/images/rohan-singh-avatar.webp";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 import deepakKumarAvatar from "@/assets/images/deepak-kumar-avatar.webp";
 import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
-import gstRecoProPage from "@/assets/images/gst-reco-pro-page.webp";
-import sentinelPage from "@/assets/images/sentinel-landing-page.webp";
-import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
-import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
-import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import { StaticImageData } from "next/image";
 
 export const siteOrigin = "https://theprinceraj.in";
@@ -23,16 +18,6 @@ export type BlogItem = {
 export type FooterLinkItem = {
     title: string;
     href: string;
-};
-
-export type PortfolioProjectItem = {
-    company: string;
-    year: string;
-    title: string;
-    results: string[];
-    link: string;
-    linkText: string;
-    image: StaticImageData;
 };
 
 export type TestimonialItem = {
@@ -96,74 +81,6 @@ export const footerLinks: FooterLinkItem[] = [
     {
         title: "Sponsor Me ❤️",
         href: "https://razorpay.me/@theprinceraj",
-    },
-];
-
-export const portfolioProjects: PortfolioProjectItem[] = [
-    {
-        "company": "GST Reco Pro",
-        "year": "2026",
-        "title": "Tax Compliance & Reconciliation SaaS",
-        "results": [
-            "Collaborated with a domain expert to build a production-ready bulk tax document processing platform.",
-            "Architected a secure admin dashboard with advanced reporting and client-side data privacy.",
-            "Built an end-to-end solution with Supabase, Razorpay, React, and TailwindCSS.",
-        ],
-        "link": "https://www.youtube.com/watch?v=MR8hMd3QWLo",
-        "linkText": "View Launch Video",
-        image: gstRecoProPage,
-    },
-    {
-        company: "Project Sentinel",
-        year: "2026",
-        title: "AI Governance Proxy",
-        results: [
-            "Built a low-latency AI governance proxy to intercept and validate all application-to-LLM API requests",
-            "Integrated Microsoft Presidio to automatically detect and redact 50+ PII and sensitive data types",
-            "Designed a live governance log providing real-time visibility into semantic intent and safety risks",
-        ],
-        link: "https://sentinel.theprinceraj.in",
-        linkText: "View Live Site",
-        image: sentinelPage,
-    },
-    {
-        company: "Cover Genius",
-        year: "2025",
-        title: "AI-Powered Cover Letter Assistant",
-        results: [
-            "Built an AI-driven system to generate tailored cover letters with resume PDF analysis in seconds",
-            "Implemented secure authentication with email verification and guest modes",
-            "Developed credit-based generation system with Razorpay and PayPal support",
-        ],
-        link: "https://cv.theprinceraj.in",
-        linkText: "View Live Site",
-        image: coverGeniusPage,
-    },
-    {
-        company: "Local Social",
-        year: "2025",
-        title: "Scalable Backend for Social Media Platform",
-        results: [
-            "Engineered a modular NestJS backend powering 30+ production-grade APIs",
-            "Built social features including authentication, feeds, profiles, and hashtags",
-            "Designed the complete database architecture with geospatial querying for location-aware content discovery",
-        ],
-        link: "/images/flowchart-local-social.png",
-        linkText: "View Flowchart",
-        image: localSocialPostmanPage,
-    },
-    {
-        company: "Markshify",
-        year: "2024",
-        title: "OCR-Based Marksheet Scanner",
-        results: [
-            "Automated conversion of scanned marksheets into structured CSV to eliminate manual data entry",
-            "Extracts 20+ fields (student details, roll, subject-wise marks, totals) with validation and confidence scoring",
-            "Custom and robust utility functions for data extraction",
-        ],
-        link: "https://github.com/theprinceraj/Markshify",
-        linkText: "View Code",
-        image: markshifyLandingPage,
     },
 ];
 
