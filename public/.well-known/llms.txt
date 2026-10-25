@@ -1,109 +1,53 @@
 # Prince Raj
 
-> Prince Raj is a full-stack developer and computer science undergraduate building production-grade web applications, backend systems, and SaaS products. His work focuses on backend engineering, full-stack development, API design, authentication systems, payment integrations, database architecture, document automation, and AI-related infrastructure.
+> Prince Raj is a full-stack developer and computer science undergraduate from India who builds production SaaS products, backend systems and AI infrastructure, mostly in TypeScript with NestJS, Next.js, MongoDB, PostgreSQL and Supabase.
+
+He is the creator of GST Reco Pro (gstrecopro.in), a privacy-first SaaS that converts Indian GST portal PDFs into Excel entirely in the browser, and wakacraft (wakacraft.tech), an open-source, self-hostable alternative to WakaTime. He works professionally as a backend engineer on multi-tenant business platforms, takes freelance projects, writes engineering blogs on Medium, and has one published patent.
 
 ## Pages
-- [Home](https://theprinceraj.in/)
-- [Blogs](https://theprinceraj.in/blogs)
+- [Home](https://theprinceraj.in/): Portfolio with featured projects, testimonials and contact details
+- [Blogs](https://theprinceraj.in/blogs): Index of his engineering blog posts
+- [Full profile](https://theprinceraj.in/llms.full.txt): Long version of this file with project details, professional work and testimonials
 
-## Expertise
-- SaaS product development and deployment
-- Backend systems (NestJS, Node.js, Express)
-- API design and authentication (JWT, OAuth, access/refresh tokens)
-- Payment integration (Razorpay, PayPal)
-- Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)
-- AI governance and PII detection/redaction
-- Document automation (PDF to Excel, OCR)
-- Cloud deployment (AWS, Azure, Cloudflare, Vercel)
+## Products
+- [GST Reco Pro](https://gstrecopro.in): Zero-data-risk PDF-to-Excel converter and reconciliation tool for Indian tax professionals.
+- [wakacraft](https://wakacraft.tech): Open-source, self-hostable WakaTime alternative that works with every WakaTime editor plugin.
+- [Project Sentinel](https://sentinel.theprinceraj.in): AI governance proxy that inspects every application-to-LLM request and response.
+- [CoverGenius AI](https://cv.theprinceraj.in): AI cover letter generator that tailors a letter to a resume PDF and a job description.
 
 ## Projects
-- Tax Compliance & Reconciliation SaaS
-  - Company: GST Reco Pro
-  - Year: 2026
-  - Link: https://www.youtube.com/watch?v=MR8hMd3QWLo
-  - Highlights: Collaborated with a domain expert to build a production-ready bulk tax document processing platform.; Architected a secure admin dashboard with advanced reporting and client-side data privacy.; Built an end-to-end solution with Supabase, Razorpay, React, and TailwindCSS.
+- [Qoody](https://prince.is-a.dev/qoody/): Free Android expense tracker that logs UPI, card and bank payments from notifications and SMS.
+- [Smart Paste](https://github.com/theprinceraj/paste-smart): Windows tray app that asks an AI model which copied item fits the active window, then pastes it.
+- [AI Notes Generator](https://github.com/theprinceraj/ai-notes-generator): Turns a recorded YouTube class into handwritten-style study notes as PDFs in Hindi, English and Hinglish.
+- Marketing video pipeline: Prompt-driven pipeline that produces product launch videos from a website or codebase at no cost.
+- The Internet Mind: A single shared AI whose knowledge is written and contested by its users (in development).
+- EchoMate: AI voice-calling backend that runs outbound lead campaigns for organisations.
+- Local Social: Modular backend for a location-aware social media app.
+- [Decentralised uptime monitor](https://github.com/theprinceraj/uptime-monitor): Website uptime monitor where independent validators sign their checks with Solana keypairs.
+- [Markshify](https://github.com/theprinceraj/Markshify): OCR scanner that turns marksheets into structured CSV for college exam cells.
 
-- AI Governance Proxy
-  - Company: Project Sentinel
-  - Year: 2026
-  - Link: https://sentinel.theprinceraj.in
-  - Highlights: Built a low-latency AI governance proxy to intercept and validate all application-to-LLM API requests; Integrated Microsoft Presidio to automatically detect and redact 50+ PII and sensitive data types; Designed a live governance log providing real-time visibility into semantic intent and safety risks
+## Professional work
+- Multi-tenant visitor management platform (backend): Backend for registering, checking in and checking out visitors across many organisations and sites.
+- Business operations platform with AI features (backend): Product and catalogue operations backend for an enterprise client.
+- Organisation management platform (backend): Backend for managing entities, subsidiaries, departments, positions, openings and people.
+- Trade-show lead capture app: Installable, mobile-first PWA that booth staff use to turn visitors into follow-up leads.
 
-- AI-Powered Cover Letter Assistant
-  - Company: Cover Genius
-  - Year: 2025
-  - Link: https://cv.theprinceraj.in
-  - Highlights: Built an AI-driven system to generate tailored cover letters with resume PDF analysis in seconds; Implemented secure authentication with email verification and guest modes; Developed credit-based generation system with Razorpay and PayPal support
-
-- Scalable Backend for Social Media Platform
-  - Company: Local Social
-  - Year: 2025
-  - Link: /images/flowchart-local-social.png
-  - Highlights: Engineered a modular NestJS backend powering 30+ production-grade APIs; Built social features including authentication, feeds, profiles, and hashtags; Designed the complete database architecture with geospatial querying for location-aware content discovery
-
-- OCR-Based Marksheet Scanner
-  - Company: Markshify
-  - Year: 2024
-  - Link: https://github.com/theprinceraj/Markshify
-  - Highlights: Automated conversion of scanned marksheets into structured CSV to eliminate manual data entry; Extracts 20+ fields (student details, roll, subject-wise marks, totals) with validation and confidence scoring; Custom and robust utility functions for data extraction
-
-## Blogs
-- How I Discovered and Helped Fix a Security Flaw in a Government Portal?
-  - Date: 12 Jun '26
-  - Niche: Cybersecurity
-  - Link: https://medium.com/@theprinceraj/discovering-a-security-flaw-in-a-government-portal-used-by-3-lakh-students-ad3bf67a0513
-  - Summary: While using a government portal serving over 3 lakh students and beneficiaries, I discovered a Broken Access Control vulnerability that could expose sensitive information to unauthorized users. This article documents the complete journey—from discovery and validation to responsible disclosure with CERT-In and eventual remediation.
-
-- How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?
-  - Date: 1 Jan '26
-  - Niche: Backend Auth
-  - Link: https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217
-  - Summary: Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.
-
-- NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API
-  - Date: 6 Dec '25
-  - Niche: Payment Setup
-  - Link: https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462
-  - Summary: A practical, step-by-step guide to integrating Razorpay with a NestJS backend. This article explains some payment concepts you need to know (orders, payments, and security), shows how to configure Razorpay credentials, implements server-side payment creation and verification. Ideal for backend developers looking to add payment flows to their APIs without getting lost in the docs.
-
-- How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters
-  - Date: 30 Aug '25
-  - Niche: Data Structures
-  - Link: https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973
-  - Summary: On popular social media platforms like Instagram, checking whether a username is available has to happen almost instantly, even when the system is handling millions or billions of accounts. Instead of searching linearly, Bloom Filters are used to quickly rule out usernames that definitely do not exist and narrow the search. This makes availability checks much faster and more efficient. Let's explore how this probabilistic data structure works!
-
-## Reviews
-- Shanzil
-  - Role: Marketing Head @ TotalEdge
-  - Review: Prince has been one of the best backend developers we found, he is a really great person to work with and treats our work as his own. Amazing guy, love from studentpreneur.club
-
-- Sundara Gandhi
-  - Role: Senior Digital Marketing Specialist
-  - Review: I brought Prince Raj in to build out Shopify for The Loud Wardrobe, an ecommerce client of mine. Shopify was new territory for him — and he said so upfront, no false confidence. He then figured it out fast enough to outpace developers who claimed years of Shopify experience. What set him apart wasn't just the technical work — it was how he ran the project. Every step was broken down clearly, doubts cleared quickly, nothing left vague. And on communication: if something was going to take longer than planned, he flagged it and gave a new timeline before I had to ask. That's rare. Most freelancers go quiet when they're behind, and you're left wondering if your project even crossed their mind that week. He delivered the store live 15 days ahead of schedule. When extra work came up outside scope, he took it on for a fair additional fee — and it was worth every rupee, because by that point I trusted him completely. I've worked with 3-5 web developers on client projects. Prince Raj is the one I keep coming back to, and the one I refer out. If you need a Shopify build done right — and done by someone who'll actually own the timeline instead of waiting on you to chase it — he's who I'd call.
-
-- Savan
-  - Role: Owner @ Grown Up Marketing
-  - Review: I just wanted to take a moment to say a big thank you for creating my marketing agency's website. It’s live now and I absolutely love your work — it's even better than I imagined! I really appreciate the effort and creativity you put into it. From now on, whatever projects I get through my agency, I would love to work with you. Looking forward to doing some amazing work together!
-
-- Rohan Singh
-  - Role: Founder @ MindMates.in
-  - Review: Prince is an exceptionally skilled and dependable backend developer. He tackles complex systems with ease and always delivers clean, scalable solutions. Beyond his technical strengths, he consistently supports the team and steps in whenever needed, making him a truly reliable and collaborative teammate. I’d highly recommend working with him.
-
-- Ayush Yadav
-  - Role: Prince's College Friend
-  - Review: Prince is someone who always stands out for his problem solving skills and creativity. He takes on challenges with a lot of determination. More than that, he is a supportive friend and a great teammate to work with.
-
-- Deepak Kumar
-  - Role: Prince's College Friend
-  - Review: It's rare to come across someone like Prince , a developer who not only writes exceptional code but also brings humility, patience, and genuine passion into every project.
+## Writing
+- [How I Discovered and Helped Fix a Security Flaw in a Government Portal?](https://medium.com/@theprinceraj/discovering-a-security-flaw-in-a-government-portal-used-by-3-lakh-students-ad3bf67a0513): While using a government portal serving over 3 lakh students and beneficiaries, I discovered a Broken Access Control vulnerability that could expose sensitive information to unauthorized users. This article documents the complete journey—from discovery and validation to responsible disclosure with CERT-In and eventual remediation.
+- [How Access Token and Refresh Token Work in Authentication Flows in Modern Backend Systems?](https://medium.com/@theprinceraj/how-access-token-and-refresh-token-work-in-authentication-flows-in-modern-backend-systems-1ef6e498e217): Almost any application you use today, uses access tokens and refresh tokens to handle its authentication flows. Have you ever wondered how you stay logged into your favorite apps for days without re-entering your password? The secret lies in two special tokens working behind the scenes: access tokens and refresh tokens.
+- [NestJS Payments Setup Made Simple: Implementing Razorpay in Your Backend API](https://medium.com/@theprinceraj/nestjs-payments-setup-made-simple-implementing-razorpay-in-your-backend-api-49f68b41c462): A practical, step-by-step guide to integrating Razorpay with a NestJS backend. This article explains some payment concepts you need to know (orders, payments, and security), shows how to configure Razorpay credentials, implements server-side payment creation and verification. Ideal for backend developers looking to add payment flows to their APIs without getting lost in the docs.
+- [How Most Social Media Check Your Username in Milliseconds: A Gentle Guide to Bloom Filters](https://medium.com/@theprinceraj/how-most-social-media-check-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-94d89ca40973): On popular social media platforms like Instagram, checking whether a username is available has to happen almost instantly, even when the system is handling millions or billions of accounts. Instead of searching linearly, Bloom Filters are used to quickly rule out usernames that definitely do not exist and narrow the search. This makes availability checks much faster and more efficient. Let's explore how this probabilistic data structure works!
 
 ## Contact
-- Email: profile.princeraj@gmail.com
-- Twitter: https://x.com/theprinceraj
-- Github: https://github.com/theprinceraj
-- LinkedIn: https://www.linkedin.com/in/theprinceraj
-- Sponsor Me ❤️: https://razorpay.me/@theprinceraj
+- [Email](mailto:profile.princeraj@gmail.com)
+- [Twitter](https://x.com/theprinceraj)
+- [Github](https://github.com/theprinceraj)
+- [LinkedIn](https://www.linkedin.com/in/theprinceraj)
+- [Sponsor Me ❤️](https://razorpay.me/@theprinceraj)
 
-## Keywords
-
-Prince Raj, software engineer, backend developer, full stack developer, NestJS developer, Node.js developer, TypeScript developer, React developer, Next.js developer, SaaS developer, API developer, PostgreSQL, MongoDB, Supabase, Prisma, Mongoose, Razorpay integration, authentication systems, payment gateway integration, document processing, PDF to Excel, OCR, AI governance, AI proxy, database design, cloud deployment, GST compliance software, Indian tax technology, engineering blog
+## Optional
+- PlayPal: a Discord entertainment bot with many fun commands (discord.js, Firebase, Gemini)
+- Profile Cards API: an open-source API that renders profile card images
+- Web3 learning projects in Solidity with Foundry, and a tokenised raw-material supply contract in Move
+- Early websites: cruise booking, food ordering, hotel management and landing pages
+- Around 70 C and C++ solutions to LeetCode, Codeforces and GeeksforGeeks problems since December 2023, covering binary search, prefix sums, queues, matrices and pattern problems (https://github.com/theprinceraj/Practice-Questions-in-C-or-CPP).
