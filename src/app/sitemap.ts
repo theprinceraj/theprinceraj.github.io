@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { blogs, siteOrigin } from "@/content/site-content";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         { url: `${siteOrigin}/`, changeFrequency: "daily", priority: 1 },
