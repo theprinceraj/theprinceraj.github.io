@@ -70,6 +70,16 @@ const CONFIG = {
         Prince also writes engineering blogs on topics such as backend authentication, token-based login flows, Razorpay integration in NestJS, Bloom filters, and cybersecurity. His writing and projects show a consistent focus on practical engineering, system design, and applied problem-solving.
         
         If you are looking for a developer who can build backend-heavy web applications, SaaS products, document automation tools, and modern full-stack platforms, Prince Raj is a strong fit.`,
+        expertise: [
+            "SaaS product development and deployment",
+            "Backend systems (NestJS, Node.js, Express)",
+            "API design and authentication (JWT, OAuth, access/refresh tokens)",
+            "Payment integration (Razorpay, PayPal)",
+            "Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)",
+            "AI governance and PII detection/redaction",
+            "Document automation (PDF to Excel, OCR)",
+            "Cloud deployment (AWS, Azure, Cloudflare, Vercel)",
+        ],
         keywords: [
             "Prince Raj",
             "software engineer",

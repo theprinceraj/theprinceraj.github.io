@@ -74,7 +74,7 @@ export default function RootLayout({
         identifier: "@theprinceraj",
         jobTitle: "Full-Stack Developer & SaaS Builder",
         email: "profile.princeraj@gmail.com",
-        logo: "https://theprinceraj.in/images/hero-screenshot.png",
+        image: "https://theprinceraj.in/images/hero-screenshot.png",
         knowsAbout: [
             "Backend Engineering",
             "NestJS",
@@ -98,7 +98,7 @@ export default function RootLayout({
         worksFor: {
             "@type": "Organization",
             name: "GST Reco Pro",
-            url: "https://gstrecopro.com",
+            url: "https://gstrecopro.in",
         },
     } as const;
 
@@ -112,14 +112,6 @@ export default function RootLayout({
             "Prince Raj is a full-stack developer and SaaS builder. Portfolio, projects, and engineering blog.",
         author: { "@id": "https://theprinceraj.in#person" },
         inLanguage: "en-US",
-        potentialAction: {
-            "@type": "SearchAction",
-            target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://theprinceraj.in/search?q={search_term_string}",
-            },
-            "query-input": "required name=search_term_string",
-        },
     } as const;
     return (
         <html lang="en">

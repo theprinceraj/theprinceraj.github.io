@@ -32,7 +32,6 @@ function generateSitemap() {
     const urls = [
         { loc: `${siteOrigin}/`, changefreq: "daily", priority: 1 },
         { loc: `${siteOrigin}/blogs`, changefreq: "weekly", priority: 0.8 },
-        { loc: `${siteOrigin}/llms.txt`, changefreq: "weekly", priority: 0.8 },
         ...blogs
             .filter((blog) => blog.link.startsWith(siteOrigin))
             .map((blog) => ({
@@ -67,140 +66,107 @@ function generateRss() {
     console.log("Wrote public/rss.xml");
 }
 
+// seo.about is an indented template literal; strip the indent so it isn't rendered as Markdown code blocks
+const about = seo.about
+    .split("\n")
+    .map((line) => line.trim())
+    .join("\n");
+
 function generateSummary(): string {
-    return seo.about.split("\n\n")[0].trim();
+    return about.split(/\n\s*\n/)[0];
+}
+
+function writeLlmsFile(fileName: string, content: string) {
+    mkdirSync(WELL_KNOWN_DIR, { recursive: true });
+
+    writeFileSync(path.join(PUBLIC_DIR, fileName), content, "utf8");
+    console.log(`Wrote public/${fileName}`);
+
+    writeFileSync(path.join(WELL_KNOWN_DIR, fileName), content, "utf8");
+    console.log(`Wrote public/.well-known/${fileName}`);
+}
+
+function buildLlmsContent({
+    title,
+    intro,
+    pages,
+    blogsHeading,
+    testimonialsHeading,
+}: {
+    title: string;
+    intro: string[];
+    pages: string[];
+    blogsHeading: string;
+    testimonialsHeading: string;
+}) {
+    return [
+        `# ${title}`,
+        "",
+        ...intro,
+        "",
+        "## Pages",
+        ...pages,
+        "",
+        "## Expertise",
+        ...seo.expertise.map((item) => `- ${item}`),
+        "",
+        "## Projects",
+        ...portfolioProjects.flatMap((project) => [
+            `- ${project.title}`,
+            `  - Company: ${project.company}`,
+            `  - Year: ${project.year}`,
+            `  - Link: ${project.link}`,
+            `  - Highlights: ${project.results.join("; ")}`,
+            "",
+        ]),
+        `## ${blogsHeading}`,
+        ...blogs.flatMap((blog) => [
+            `- ${blog.title}`,
+            `  - Date: ${blog.date}`,
+            `  - Niche: ${blog.niche}`,
+            `  - Link: ${blog.link}`,
+            `  - Summary: ${blog.description}`,
+            "",
+        ]),
+        `## ${testimonialsHeading}`,
+        ...testimonials.flatMap((testimonial) => [
+            `- ${testimonial.name}`,
+            `  - Role: ${testimonial.position}`,
+            `  - Review: ${testimonial.text}`,
+            "",
+        ]),
+        "## Contact",
+        `- Email: ${email}`,
+        ...footerLinks.map((link) => `- ${link.title}: ${link.href}`),
+        "",
+        "## Keywords",
+        "",
+        seo.keywords.join(", "),
+    ].join("\n");
 }
 
 function generateLlmstxt() {
-    mkdirSync(WELL_KNOWN_DIR, { recursive: true });
+    const content = buildLlmsContent({
+        title: "Prince Raj",
+        intro: [`> ${generateSummary()}`],
+        pages: [`- [Home](${siteOrigin}/)`, `- [Blogs](${siteOrigin}/blogs)`],
+        blogsHeading: "Blogs",
+        testimonialsHeading: "Reviews",
+    });
 
-    const summary = generateSummary();
-    const contactLines = footerLinks.map((link) => `- ${link.title}: ${link.href}`);
-
-    const content = [
-        `# Prince Raj`,
-        "",
-        `> ${summary}`,
-        "",
-        "## Pages",
-        `- [Home](${siteOrigin}/)`,
-        `- [Blogs](${siteOrigin}/blogs)`,
-        "",
-        "## Expertise",
-        "- SaaS product development and deployment",
-        "- Backend systems (NestJS, Node.js, Express)",
-        "- API design and authentication (JWT, OAuth, access/refresh tokens)",
-        "- Payment integration (Razorpay, PayPal)",
-        "- Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)",
-        "- AI governance and PII detection/redaction",
-        "- Document automation (PDF to Excel, OCR)",
-        "- Cloud deployment (AWS, Azure, Cloudflare, Vercel)",
-        "",
-        "## Projects",
-        ...portfolioProjects.flatMap((project) => [
-            `- ${project.title}`,
-            `  - Company: ${project.company}`,
-            `  - Year: ${project.year}`,
-            `  - Link: ${project.link}`,
-            `  - Highlights: ${project.results.join("; ")}`,
-            "",
-        ]),
-        "## Blogs",
-        ...blogs.flatMap((blog) => [
-            `- ${blog.title}`,
-            `  - Date: ${blog.date}`,
-            `  - Niche: ${blog.niche}`,
-            `  - Link: ${blog.link}`,
-            `  - Summary: ${blog.description}`,
-            "",
-        ]),
-        "## Reviews",
-        ...testimonials.flatMap((testimonial) => [
-            `- ${testimonial.name}`,
-            `  - Role: ${testimonial.position}`,
-            `  - Review: ${testimonial.text}`,
-            "",
-        ]),
-        "## Contact",
-        `- Email: ${email}`,
-        ...contactLines,
-        "",
-        "## Keywords",
-        "",
-        seo.keywords.join(", "),
-    ].join("\n");
-
-    writeFileSync(path.join(PUBLIC_DIR, "llms.txt"), content, "utf8");
-    console.log("Wrote public/llms.txt");
-
-    writeFileSync(path.join(WELL_KNOWN_DIR, "llms.txt"), content, "utf8");
-    console.log("Wrote public/.well-known/llms.txt");
+    writeLlmsFile("llms.txt", content);
 }
 
 function generateLlmsFullTxt() {
-    mkdirSync(WELL_KNOWN_DIR, { recursive: true });
+    const content = buildLlmsContent({
+        title: "Prince Raj - Full Profile",
+        intro: ["## About", about],
+        pages: [`- Home: ${siteOrigin}/`, `- Blogs: ${siteOrigin}/blogs`],
+        blogsHeading: "Full Blog Descriptions",
+        testimonialsHeading: "Full Testimonials",
+    });
 
-    const contactLines = footerLinks.map((link) => `- ${link.title}: ${link.href}`);
-
-    const content = [
-        "# Prince Raj - Full Profile",
-        "",
-        "## About",
-        seo.about,
-        "",
-        "## Pages",
-        `- Home: ${siteOrigin}/`,
-        `- Blogs: ${siteOrigin}/blogs`,
-        "",
-        "## Expertise",
-        "- SaaS product development and deployment",
-        "- Backend systems (NestJS, Node.js, Express)",
-        "- API design and authentication (JWT, OAuth, access/refresh tokens)",
-        "- Payment integration (Razorpay, PayPal)",
-        "- Database architecture (PostgreSQL, MongoDB, Supabase, Prisma)",
-        "- AI governance and PII detection/redaction",
-        "- Document automation (PDF to Excel, OCR)",
-        "- Cloud deployment (AWS, Azure, Cloudflare, Vercel)",
-        "",
-        "## Projects",
-        ...portfolioProjects.flatMap((project) => [
-            `- ${project.title}`,
-            `  - Company: ${project.company}`,
-            `  - Year: ${project.year}`,
-            `  - Link: ${project.link}`,
-            `  - Highlights: ${project.results.join("; ")}`,
-            "",
-        ]),
-        "## Full Blog Descriptions",
-        ...blogs.flatMap((blog) => [
-            `- ${blog.title}`,
-            `  - Date: ${blog.date}`,
-            `  - Niche: ${blog.niche}`,
-            `  - Link: ${blog.link}`,
-            `  - Summary: ${blog.description}`,
-            "",
-        ]),
-        "## Full Testimonials",
-        ...testimonials.flatMap((testimonial) => [
-            `- ${testimonial.name}`,
-            `  - Role: ${testimonial.position}`,
-            `  - Review: ${testimonial.text}`,
-            "",
-        ]),
-        "## Contact",
-        `- Email: ${email}`,
-        ...contactLines,
-        "",
-        "## Keywords",
-        "",
-        seo.keywords.join(", "),
-    ].join("\n");
-
-    writeFileSync(path.join(PUBLIC_DIR, "llms.full.txt"), content, "utf8");
-    console.log("Wrote public/llms.full.txt");
-
-    writeFileSync(path.join(WELL_KNOWN_DIR, "llms.full.txt"), content, "utf8");
-    console.log("Wrote public/.well-known/llms.full.txt");
+    writeLlmsFile("llms.full.txt", content);
 }
 
 function main() {
