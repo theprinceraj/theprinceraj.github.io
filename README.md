@@ -36,7 +36,7 @@ This is the personal homepage, project showcase, blog index and contact point fo
 ## 📁 Project Structure
 
 ```
-├── .github/workflows/   # GitHub Pages deployment (static export)
+├── .github/             # GitHub Pages redirect site and its workflow
 ├── public/              # Static files served as-is (images, resume and patent PDFs)
 ├── src/
 │   ├── app/             # Pages, layout, and the sitemap/robots/rss/llms routes
@@ -94,7 +94,9 @@ $ bun run start
 
 ## 🚢 Deployment
 
-Every push to `main` runs `.github/workflows/nextjs.yml`, which builds a static export (`output: "export"`, added by `actions/configure-pages`) and publishes the `out/` folder to GitHub Pages. Every route must therefore be static: route handlers and metadata routes such as `sitemap.ts` need `export const dynamic = "force-static"`.
+The site is deployed by **Vercel**, which builds every push and serves [theprinceraj.in](https://theprinceraj.in). The text routes (`rss.xml`, `llms.txt`, `llms.full.txt`) use `export const dynamic = "force-static"` so they are prerendered at build time.
+
+**GitHub Pages** does not host the site. It serves only `.github/pages-redirect/`, which sends visitors from `prince.is-a.dev` (and `theprinceraj.github.io`) to the same path on theprinceraj.in. Pages stays enabled because this repo holds the `prince.is-a.dev` domain, and other repos' Pages sites, such as [`/qoody/`](https://prince.is-a.dev/qoody/), are served under it. `.github/workflows/pages-redirect.yml` redeploys the redirect only when those files change.
 
 ## 📄 License
 
