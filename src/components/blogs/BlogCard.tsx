@@ -1,5 +1,5 @@
 import { Card } from "../Card";
-import { ArrowUpRightIcon, CheckIcon } from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 
 export const BlogCard = ({
     title,
