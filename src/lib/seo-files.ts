@@ -1,7 +1,5 @@
-import { mkdirSync, writeFileSync } from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { blogs, testimonials, siteOrigin, footerLinks } from "../src/content/site-content";
+// Bodies of the build-time text routes: /rss.xml, /llms.txt and /llms.full.txt.
+import { blogs, testimonials, siteOrigin, footerLinks, email, keywords } from "@/content/site-content";
 import {
     llmsSummary,
     llmsIntro,
@@ -15,13 +13,7 @@ import {
     llmsEarlierWork,
     llmsPractice,
     type LlmsProject,
-} from "../src/content/llms-content";
-import { seo, email } from "../profile.config";
-
-const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
-const ROOT_DIR = path.join(SCRIPT_DIR, "..");
-const PUBLIC_DIR = path.join(ROOT_DIR, "public");
-const WELL_KNOWN_DIR = path.join(PUBLIC_DIR, ".well-known");
+} from "@/content/llms-content";
 
 function escapeXml(unsafe: string) {
     return unsafe.replace(/[<>&'"]/g, (character) => {
@@ -42,31 +34,7 @@ function escapeXml(unsafe: string) {
     });
 }
 
-function generateSitemap() {
-    const urls = [
-        { loc: `${siteOrigin}/`, changefreq: "daily", priority: 1 },
-        { loc: `${siteOrigin}/blogs`, changefreq: "weekly", priority: 0.8 },
-        ...blogs
-            .filter((blog) => blog.link.startsWith(siteOrigin))
-            .map((blog) => ({
-                loc: blog.link,
-                changefreq: "monthly",
-                priority: 0.6,
-            })),
-    ];
-
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-        .map(
-            (url) =>
-                `  <url>\n    <loc>${url.loc}</loc>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`,
-        )
-        .join("\n")}\n</urlset>`;
-
-    writeFileSync(path.join(PUBLIC_DIR, "sitemap.xml"), xml, "utf8");
-    console.log("Wrote public/sitemap.xml");
-}
-
-function generateRss() {
+export function buildRss() {
     const items = blogs
         .map(
             (blog) =>
@@ -74,20 +42,7 @@ function generateRss() {
         )
         .join("\n");
 
-    const rss = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n  <title>Prince Raj - Blogs</title>\n  <link>${siteOrigin}/blogs</link>\n  <description>Thoughts on web dev and engineering.</description>\n${items}\n</channel>\n</rss>`;
-
-    writeFileSync(path.join(PUBLIC_DIR, "rss.xml"), rss, "utf8");
-    console.log("Wrote public/rss.xml");
-}
-
-function writeLlmsFile(fileName: string, content: string) {
-    mkdirSync(WELL_KNOWN_DIR, { recursive: true });
-
-    writeFileSync(path.join(PUBLIC_DIR, fileName), content, "utf8");
-    console.log(`Wrote public/${fileName}`);
-
-    writeFileSync(path.join(WELL_KNOWN_DIR, fileName), content, "utf8");
-    console.log(`Wrote public/.well-known/${fileName}`);
+    return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n  <title>Prince Raj - Blogs</title>\n  <link>${siteOrigin}/blogs</link>\n  <description>Thoughts on web dev and engineering.</description>\n${items}\n</channel>\n</rss>`;
 }
 
 function linkLine(name: string, summary: string, url?: string) {
@@ -109,8 +64,8 @@ function projectSection(project: LlmsProject) {
 
 const contactLines = [`- [Email](mailto:${email})`, ...footerLinks.map((link) => `- [${link.title}](${link.href})`)];
 
-function generateLlmstxt() {
-    const content = [
+export function buildLlmsTxt() {
+    return [
         "# Prince Raj",
         "",
         `> ${llmsSummary}`,
@@ -142,12 +97,10 @@ function generateLlmstxt() {
         `- ${llmsPractice}`,
         "",
     ].join("\n");
-
-    writeLlmsFile("llms.txt", content);
 }
 
-function generateLlmsFullTxt() {
-    const content = [
+export function buildLlmsFullTxt() {
+    return [
         "# Prince Raj: Full Profile",
         "",
         `> ${llmsSummary}`,
@@ -206,18 +159,7 @@ function generateLlmsFullTxt() {
         ...contactLines,
         "",
         "## Keywords",
-        seo.keywords.join(", "),
+        keywords.join(", "),
         "",
     ].join("\n");
-
-    writeLlmsFile("llms.full.txt", content);
 }
-
-function main() {
-    generateSitemap();
-    generateRss();
-    generateLlmstxt();
-    generateLlmsFullTxt();
-}
-
-main();

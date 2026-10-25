@@ -1,5 +1,5 @@
 import grainImage from "@/assets/images/grain.jpg";
-import { email } from "../../profile.config";
+import { email } from "@/content/site-content";
 import { ArrowUpRightIcon } from "lucide-react";
 
 export const ContactSection = ({ id }: { id: string }) => {

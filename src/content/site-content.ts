@@ -3,6 +3,11 @@ import rohanSinghAvatar from "@/assets/images/rohan-singh-avatar.webp";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 import deepakKumarAvatar from "@/assets/images/deepak-kumar-avatar.webp";
 import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
+import gstRecoProPage from "@/assets/images/gst-reco-pro-page.webp";
+import sentinelPage from "@/assets/images/sentinel-landing-page.webp";
+import coverGeniusPage from "@/assets/images/cover-genius-screenshot.webp";
+import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
+import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import { StaticImageData } from "next/image";
 
 export const siteOrigin = "https://theprinceraj.in";
@@ -27,6 +32,7 @@ export type PortfolioProjectItem = {
     results: string[];
     link: string;
     linkText: string;
+    image: StaticImageData;
 };
 
 export type TestimonialItem = {
@@ -105,6 +111,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
         ],
         "link": "https://www.youtube.com/watch?v=MR8hMd3QWLo",
         "linkText": "View Launch Video",
+        image: gstRecoProPage,
     },
     {
         company: "Project Sentinel",
@@ -117,6 +124,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
         ],
         link: "https://sentinel.theprinceraj.in",
         linkText: "View Live Site",
+        image: sentinelPage,
     },
     {
         company: "Cover Genius",
@@ -129,6 +137,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
         ],
         link: "https://cv.theprinceraj.in",
         linkText: "View Live Site",
+        image: coverGeniusPage,
     },
     {
         company: "Local Social",
@@ -141,6 +150,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
         ],
         link: "/images/flowchart-local-social.png",
         linkText: "View Flowchart",
+        image: localSocialPostmanPage,
     },
     {
         company: "Markshify",
@@ -153,6 +163,7 @@ export const portfolioProjects: PortfolioProjectItem[] = [
         ],
         link: "https://github.com/theprinceraj/Markshify",
         linkText: "View Code",
+        image: markshifyLandingPage,
     },
 ];
 
@@ -197,4 +208,36 @@ export const testimonials: TestimonialItem[] = [
         href: "https://www.linkedin.com/in/deepak-kumar62066",
         avatar: deepakKumarAvatar,
     },
+];
+
+export const keywords = [
+    "Prince Raj",
+    "software engineer",
+    "backend developer",
+    "full stack developer",
+    "NestJS developer",
+    "Node.js developer",
+    "TypeScript developer",
+    "React developer",
+    "Next.js developer",
+    "SaaS developer",
+    "API developer",
+    "PostgreSQL",
+    "MongoDB",
+    "Supabase",
+    "Prisma",
+    "Mongoose",
+    "Razorpay integration",
+    "authentication systems",
+    "payment gateway integration",
+    "document processing",
+    "PDF to Excel",
+    "OCR",
+    "AI governance",
+    "AI proxy",
+    "database design",
+    "cloud deployment",
+    "GST compliance software",
+    "Indian tax technology",
+    "engineering blog",
 ];

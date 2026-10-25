@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import { portfolioProjects } from "../../profile.config";
+import { portfolioProjects } from "@/content/site-content";
 import { ArrowUpRightIcon, CheckCircle2Icon } from "lucide-react";
 
 export const ProjectsSection = ({ id }: { id: string }) => {
@@ -36,10 +36,10 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                     <ul className="mt-4 md:mt-5 flex flex-col gap-4">
                                         {project.results.map((result) => (
                                             <li
-                                                key={result.title}
+                                                key={result}
                                                 className="inline-flex items-center gap-2 text-white/50 font-light">
                                                 <CheckCircle2Icon className="size-8 md:size-5" />
-                                                <span className="text-xs md:text-sm lg:text-base">{result.title}</span>
+                                                <span className="text-xs md:text-sm lg:text-base">{result}</span>
                                             </li>
                                         ))}
                                     </ul>

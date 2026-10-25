@@ -9,7 +9,7 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItemsRow } from "@/components/ToolboxItemsRow";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { hobbies, toolBoxItems } from "../../profile.config";
+import { hobbies, toolboxItems } from "@/content/about-content";
 
 export const AboutSection = ({ id }: { id: string }) => {
     const constraintRef = useRef(null);
@@ -43,12 +43,12 @@ export const AboutSection = ({ id }: { id: string }) => {
                                 className="p-6 pb-0 lg:-mt-0.5"
                             />
                             <ToolboxItemsRow
-                                items={toolBoxItems}
+                                items={toolboxItems}
                                 className="mt-4 md:mt-6"
                                 itemsWrapperClassName="animate-scroll-left [animation-duration:40s]"
                             />
                             <ToolboxItemsRow
-                                items={toolBoxItems}
+                                items={toolboxItems}
                                 className="mt-6"
                                 itemsWrapperClassName="animate-scroll-right [animation-duration:20s]"
                             />

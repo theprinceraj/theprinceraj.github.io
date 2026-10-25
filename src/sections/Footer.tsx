@@ -1,5 +1,5 @@
 import { ArrowUpRightIcon } from "lucide-react";
-import { footerLinks } from "../../profile.config";
+import { footerLinks } from "@/content/site-content";
 
 export const Footer = () => {
     return (

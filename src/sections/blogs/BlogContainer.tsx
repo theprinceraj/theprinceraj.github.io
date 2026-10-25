@@ -1,5 +1,5 @@
 import { BlogCard } from "@/components/blogs/BlogCard";
-import { blogs } from "../../../profile.config";
+import { blogs } from "@/content/site-content";
 
 export const BlogContainer = () => {
     return (

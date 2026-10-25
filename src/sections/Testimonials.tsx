@@ -2,7 +2,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
 import { Card } from "@/components/Card";
 import { Fragment } from "react";
-import { testimonials } from "../../profile.config";
+import { testimonials } from "@/content/site-content";
 import { testimonialsSectionId } from "./constants";
 import { ExternalLinkIcon, UserIcon } from "lucide-react";
 export const TestimonialsSection = () => {
