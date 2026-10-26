@@ -83,11 +83,16 @@ export const socialProfiles: FooterLinkItem[] = [
     },
 ];
 
+export const sponsorLinks = {
+    github: "https://github.com/sponsors/theprinceraj",
+    razorpay: "https://razorpay.me/@theprinceraj",
+};
+
 export const footerLinks: FooterLinkItem[] = [
     ...socialProfiles,
     {
         title: "Sponsor Me ❤️",
-        href: "https://razorpay.me/@theprinceraj",
+        href: "/sponsor",
     },
 ];
 
